@@ -1,0 +1,10 @@
+# Large photo assets (6-8 MB each)
+assets/20220426_*.jpg
+assets/20220428_*.jpg
+assets/20231005_*.jpg
+
+# Temporary serving copies
+projekte/*/landing-page/kurz.html
+
+# Claude Code local settings
+.claude/
