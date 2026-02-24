@@ -110,8 +110,9 @@ p{margin-bottom:16px;}
 .btn-ghost:hover{background:var(--cta);color:var(--white);}
 .micro-copy{font-size:.85rem;color:#5a6a7a;margin-top:8px;}
 /* HERO */
-#hero{padding:var(--section-pad-d) 0 0;background:linear-gradient(135deg,var(--light-gray) 0%,var(--white) 100%);}
-.hero-content{max-width:800px;}
+#hero{padding:var(--section-pad-d) 0 0;background:linear-gradient(135deg,var(--light-gray) 0%,var(--white) 100%);position:relative;overflow:hidden;}
+#hero::before{content:"";position:absolute;top:0;right:0;bottom:0;width:50%;background:url("../../../assets/korodur-titelbild.jpg") center/cover no-repeat;opacity:.18;pointer-events:none;}
+.hero-content{max-width:800px;position:relative;z-index:1;}
 .hero-sub{font-size:clamp(1rem,2vw,1.25rem);font-weight:400;margin:20px 0 32px;line-height:1.5;}
 .key-figures{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:32px 0;}
 .key-figure{text-align:center;padding:20px 12px;background:var(--white);border-radius:var(--card-radius);box-shadow:var(--shadow);}
@@ -293,11 +294,13 @@ header nav a{margin:8px 0;font-size:1rem;}
 .mini-trust{margin-top:var(--section-pad-m);}
 }
 @media(max-width:480px){
-.key-figures{grid-template-columns:1fr 1fr;gap:12px;}
+.key-figures{grid-template-columns:1fr;gap:12px;}
 .trust-grid{grid-template-columns:1fr;}
 .steps-visual{flex-direction:column;align-items:center;}
 .downloads{flex-direction:column;align-items:stretch;}
+#hero::before{width:100%;opacity:.1;}
 }
+body.sticky-cta-visible{padding-bottom:70px;}
 .sticky-cta-visible .sticky-cta{display:flex;}
 </style>
 </head>
@@ -372,7 +375,7 @@ header nav a{margin:8px 0;font-size:1rem;}
 </div>
 <div class="section-bridge">NEODUR Level löst diese Probleme mit einem System, das speziell für die Anforderungen automatisierter Lagersysteme entwickelt wurde.</div>
 <div style="text-align:center;">
-<a href="#kontakt" class="btn btn-primary">Risiken vermeiden &ndash; Projekt jetzt bewerten lassen</a>
+<a href="#kontakt" class="btn btn-primary">Kostenlose Projektbewertung anfordern</a>
 </div>
 </div>
 </section>
@@ -399,7 +402,7 @@ header nav a{margin:8px 0;font-size:1rem;}
 <li><strong>Druckfestigkeit C40</strong> &ndash; 40 N/mm² für schwere Punkt- und Flächenlasten</li>
 <li><strong>Schnelle Sanierung</strong> &ndash; Bestandsböden können ohne langen Anlagenstillstand ertüchtigt werden</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary">Betriebssicherheit prüfen &ndash; Projektberatung anfordern</a>
+<a href="#kontakt" class="btn btn-primary">Kostenlose Projektbewertung anfordern</a>
 </div>
 <div class="tab-panel" id="tab-bauherren">
 <h3>Für Bauherren &ndash; Bauzeitplan halten, Budget sichern, ESG-Ziele erreichen</h3>
@@ -410,7 +413,7 @@ header nav a{margin:8px 0;font-size:1rem;}
 <li><strong>&ndash;30 % CO&#8322;</strong> &ndash; messbarer Beitrag zu Ihren ESG-Zielen</li>
 <li><strong>Systemlösung</strong> &ndash; ein Ansprechpartner, eine Verantwortung, keine Schnittstellenprobleme</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary">Bauzeit kalkulieren &ndash; Kostenlose Projektbewertung</a>
+<a href="#kontakt" class="btn btn-primary">Kostenlose Projektbewertung anfordern</a>
 </div>
 <div class="tab-panel" id="tab-planer">
 <h3>Für Planer &ndash; Normkonforme Spezifikation nach DIN EN 13813</h3>
@@ -448,7 +451,7 @@ header nav a{margin:8px 0;font-size:1rem;}
 <li><strong>Druckfestigkeit C40</strong> &ndash; 40 N/mm²</li>
 <li><strong>Schnelle Sanierung</strong> ohne langen Stillstand</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Projektberatung anfordern</a>
+<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Kostenlose Projektbewertung anfordern</a>
 </div>
 </div>
 <div class="accordion-item">
@@ -461,7 +464,7 @@ header nav a{margin:8px 0;font-size:1rem;}
 <li><strong>&ndash;30 % CO&#8322;</strong> für Ihre ESG-Ziele</li>
 <li><strong>Systemlösung</strong> aus einer Hand</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Kostenlose Projektbewertung</a>
+<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Kostenlose Projektbewertung anfordern</a>
 </div>
 </div>
 <div class="accordion-item">
@@ -531,7 +534,7 @@ header nav a{margin:8px 0;font-size:1rem;}
 
 <div class="comparison-summary">28 Tage warten oder nach 3 Tagen produzieren? Die Entscheidung für NEODUR Level ist keine Frage des Bodens &ndash; sondern eine Frage der Opportunitätskosten.</div>
 <div style="text-align:center;">
-<a href="#kontakt" class="btn btn-primary">Die schnellere Lösung wählen &ndash; Projekt bewerten lassen</a>
+<a href="#kontakt" class="btn btn-primary">Kostenlose Projektbewertung anfordern</a>
 </div>
 </div>
 </section>
