@@ -224,12 +224,13 @@ header .container { display: flex; align-items: center; justify-content: space-b
 header nav a { color: var(--text); font-weight: 700; font-size: .9rem; margin-left: 24px; }
 header nav a:hover { color: var(--secondary); }
 .logo { display: flex; align-items: center; }
-.logo img { height: 40px; width: auto; }
+.logo img { height: 56px; width: auto; }
 .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--text); padding: 4px; }
 
 /* ===== HERO ===== */
-#hero { padding: var(--section-pad-d) 0 0; background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%); }
-.hero-content { max-width: 800px; }
+#hero { padding: var(--section-pad-d) 0 0; background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%); position: relative; overflow: hidden; }
+#hero::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 45%; background: url("../../../assets/arm-schaden-schlagloecher.jpg") center/cover no-repeat; opacity: .12; pointer-events: none; }
+.hero-content { max-width: 800px; position: relative; z-index: 1; }
 .hero-sub { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 400; margin: 20px 0 32px; line-height: 1.5; }
 .key-figures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 32px 0; }
 .key-figure { text-align: center; padding: 20px 12px; background: var(--white); border-radius: var(--card-radius); box-shadow: var(--shadow); }
@@ -382,13 +383,27 @@ blockquote.testimonial cite { display: block; margin-top: 12px; font-style: norm
 .secondary-ctas p { font-size: .95rem; margin-bottom: 8px; }
 
 /* ===== FOOTER ===== */
-footer { background: var(--primary); color: var(--white); padding: 48px 0 24px; }
+footer { background: var(--primary); color: var(--white); padding: 24px 0; }
 footer a { color: var(--mid-gray); }
 footer a:hover { color: var(--white); }
-.footer-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-bottom: 32px; }
-.footer-brand { font-weight: 900; font-size: 1.5rem; margin-bottom: 8px; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: 20px; text-align: center; font-size: .9rem; color: var(--mid-gray); }
+.footer-compact { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+.footer-left p { font-size: .85rem; margin: 0; line-height: 1.6; }
+.footer-right { display: flex; gap: 20px; flex-wrap: wrap; font-size: .85rem; }
+/* CTA BOX */
+.cta-box { max-width: 560px; margin: 0 auto; text-align: center; padding: 40px 32px; background: var(--light-gray); border-radius: var(--card-radius); }
+.btn-lg { padding: 20px 40px; font-size: 1.15rem; }
+.cta-box-divider { display: flex; align-items: center; gap: 16px; margin: 28px 0; color: #5a6a7a; font-size: .9rem; }
+.cta-box-divider::before, .cta-box-divider::after { content: ""; flex: 1; height: 1px; background: var(--mid-gray); }
+/* BEFORE/AFTER GRID */
+.before-after { margin: 40px 0; }
+.ba-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ba-item { position: relative; border-radius: var(--card-radius); overflow: hidden; box-shadow: var(--shadow); }
+.ba-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.ba-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,45,89,.85)); color: var(--white); font-weight: 700; font-size: .85rem; padding: 24px 12px 10px; text-align: center; }
+/* TECHNIK LAYOUT */
+.technik-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0; }
+.technik-table-col { overflow-x: auto; }
+.technik-image-col { position: sticky; top: 100px; }
 
 /* ===== STICKY CTA (Mobile) ===== */
 .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); box-shadow: 0 -2px 12px rgba(0,0,0,.12); padding: 10px 16px; z-index: 900; display: none; align-items: center; justify-content: center; gap: 12px; max-height: 60px; }
@@ -415,18 +430,18 @@ footer a:hover { color: var(--white); }
   .problem-card:last-child { transform: none; }
   .ref-grid { grid-template-columns: 1fr; }
   .steps-process { grid-template-columns: 1fr; gap: 32px; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-compact { flex-direction: column; gap: 20px; }
+  .footer-right { justify-content: flex-start; }
+  .cta-box { padding: 28px 20px; }
   .zielgruppen-tabs { display: none; }
   .zielgruppen-accordion { display: block; }
   #aktion .container > div:last-child { grid-template-columns: 1fr !important; }
   .comparison-table { display: none; }
   .comparison-cards { display: block; }
   .hero-ctas .btn { width: 100%; }
-  .form-wrapper { padding: 28px 20px; }
-  header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 16px 24px; box-shadow: 0 4px 12px rgba(0,0,0,.1); flex-direction: column; }
-  header nav.open { display: flex; }
-  header nav a { margin: 8px 0; font-size: 1rem; }
-  .mobile-menu-btn { display: block; }
+  header nav a { margin-left: 16px; font-size: .8rem; }
+  .technik-layout { grid-template-columns: 1fr; }
+  .ba-grid { grid-template-columns: repeat(2, 1fr); }
   .mini-trust .container { gap: 16px 24px; }
   .mini-trust-item { font-size: .85rem; }
   .mini-trust { margin-top: var(--section-pad-m); }
@@ -438,7 +453,10 @@ footer a:hover { color: var(--white); }
   .key-figures { grid-template-columns: 1fr 1fr; gap: 12px; }
   .form-steps-visual { flex-direction: column; align-items: center; }
   .benefits-bar { flex-direction: column; align-items: flex-start; }
+  .ba-grid { grid-template-columns: 1fr 1fr; }
+  #hero::before { width: 100%; opacity: .08; }
 }
+body.sticky-cta-visible { padding-bottom: 70px; }
 .sticky-cta-visible .sticky-cta { display: flex; }
 </style>
 </head>
@@ -447,17 +465,11 @@ footer a:hover { color: var(--white); }
 <!-- ==================== HEADER ==================== -->
 <header>
 <div class="container">
-<a href="https://www.korodur.de/" class="logo"><img src="../../../assets/korodur-logo.png" alt="KORODUR International GmbH" height="40"></a>
-<button class="mobile-menu-btn" aria-label="Hauptmen&uuml; &ouml;ffnen">&#9776;</button>
+<a href="https://www.korodur.de/" class="logo"><img src="../../../assets/korodur-logo.png" alt="KORODUR International GmbH" height="56"></a>
 <nav aria-label="Hauptnavigation">
-<a href="#problem">Problem</a>
-<a href="#loesung">L&ouml;sung</a>
-<a href="#vergleich">Vergleich</a>
+<a href="#loesung">Produkt</a>
 <a href="#referenzen">Referenzen</a>
-<a href="#zielgruppen">Zielgruppen</a>
 <a href="#aktion" style="color:var(--secondary);font-weight:900;">Aktion</a>
-<a href="#technik">Technik</a>
-<a href="#faq">FAQ</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
 </div>
@@ -479,19 +491,19 @@ footer a:hover { color: var(--white); }
 <div class="key-figure"><span class="number">30 Min.</span><span class="label">Begehbar</span></div>
 <div class="key-figure"><span class="number">30&ndash;600 mm</span><span class="label">Einbaust&auml;rke</span></div>
 <div class="key-figure"><span class="number">38 N/mm&sup2;</span><span class="label">Druckfestigkeit</span></div>
-<div class="key-figure"><span class="number">5+</span><span class="label">Referenzprojekte</span></div>
+<div class="key-figure"><span class="number">50+</span><span class="label">Referenzprojekte</span></div>
 </div>
 <div class="hero-ctas">
-<a href="#kontakt" class="btn btn-primary">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 <a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Datenblatt herunterladen (PDF)</a>
 </div>
-<p class="micro-copy">Kostenlos und unverbindlich &ndash; Antwort innerhalb von 48&nbsp;Stunden. Aktion g&uuml;ltig bis Ende M&auml;rz 2026.</p>
+<p class="micro-copy">Aktion g&uuml;ltig bis Ende M&auml;rz 2026.</p>
 </div>
 
 <!-- Mini Trust Bar INSIDE Hero (CRO Quick Win #1) -->
 <div class="mini-trust">
 <div class="container">
-<span class="mini-trust-item"><span class="icon">&#10003;</span> <strong>5+ Referenzprojekte</strong> in 3 L&auml;ndern</span>
+<span class="mini-trust-item"><span class="icon">&#10003;</span> <strong>50+ Referenzprojekte</strong> weltweit</span>
 <span class="mini-trust-item"><span class="icon">&#10003;</span> <strong>Seit 2021</strong> im Praxiseinsatz</span>
 <span class="mini-trust-item"><span class="icon">&#10003;</span> <strong>Bew&auml;hrt</strong> unter Schwerlastverkehr</span>
 <span class="mini-trust-item"><span class="icon">&#10003;</span> <strong>KORODUR</strong> &ndash; seit 1936</span>
@@ -520,7 +532,7 @@ footer a:hover { color: var(--white); }
 <div class="problem-card">
 <span class="card-icon">&#10004;</span>
 <h3>Schnell, einfach &ndash; und es h&auml;lt</h3>
-<p>Sack auf, Wasser dazu, mischen, einbauen. Nach 30 Minuten begehbar, nach einer Stunde voll belastbar. Ohne Fr&auml;se, ohne Walze, ohne Haftbr&uuml;cke. Und das Ergebnis? H&auml;lt unter LKW-Verkehr &ndash; nachgewiesen in 5 Referenzprojekten.</p>
+<p>Sack auf, Wasser dazu, mischen, einbauen. Nach 30 Minuten begehbar, nach einer Stunde voll belastbar. Ohne Fr&auml;se, ohne Walze, ohne Haftbr&uuml;cke. Und das Ergebnis? H&auml;lt unter LKW-Verkehr &ndash; nachgewiesen in &uuml;ber 50 Referenzprojekten.</p>
 </div>
 </div>
 
@@ -567,7 +579,7 @@ footer a:hover { color: var(--white); }
 </div>
 
 <div style="text-align:center;">
-<a href="#kontakt" class="btn btn-primary">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 <p class="micro-copy">Wir beraten Sie, welche Menge Sie f&uuml;r Ihre Fl&auml;che ben&ouml;tigen.</p>
 </div>
 </div>
@@ -616,7 +628,7 @@ footer a:hover { color: var(--white); }
 
 <!-- CTA after comparison (CRO Quick Win #2) -->
 <div style="text-align:center;">
-<a href="#kontakt" class="btn btn-primary">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 <p class="micro-copy">Die wirtschaftlichere L&ouml;sung f&uuml;r Ihr Projekt.</p>
 </div>
 </div>
@@ -625,58 +637,68 @@ footer a:hover { color: var(--white); }
 <!-- ==================== REFERENZPROJEKTE ==================== -->
 <section id="referenzen" class="bg-white">
 <div class="container">
-<h2>Bew&auml;hrt in der Praxis &ndash; von der Kommunalstra&szlig;e bis zur LKW-Ausfahrt</h2>
-<p class="section-intro">5 dokumentierte Projekte. 3 L&auml;nder. Von 2021 bis 2025. Rapid Set ARM h&auml;lt &ndash; und wir k&ouml;nnen es beweisen.</p>
+<h2>Bew&auml;hrt in der Praxis</h2>
+<p class="section-intro">&Uuml;ber 50 Projekte weltweit. Von 2021 bis heute. Rapid Set ARM h&auml;lt &ndash; und wir k&ouml;nnen es beweisen.</p>
 
 <div class="ref-grid">
-<!-- Referenz 1: Kaufland -->
+<!-- Referenz 1: Autohaus Versmold -->
 <div class="ref-card">
-<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Crect fill='%23d9dada' width='400' height='220'/%3E%3Ctext x='200' y='110' text-anchor='middle' fill='%23002d59' font-family='Arial' font-size='14'%3EKaufland Bukarest%3C/text%3E%3C/svg%3E" alt="Parkplatzsanierung Kaufland Bukarest mit Rapid Set ASPHALT REPAIR MIX bei laufendem Betrieb" class="ref-card-img" width="400" height="220" loading="lazy">
+<img src="../../../assets/arm-ergebnis-weitwinkel.jpg" alt="Reparierte Zufahrt Autohaus Versmold mit Rapid Set ASPHALT REPAIR MIX &ndash; mehrere Stellen dauerhaft saniert" class="ref-card-img" loading="lazy">
 <div class="ref-card-body">
-<span class="ref-card-badge">Einzelhandel / Retail</span>
-<span class="ref-card-badge">2025</span>
-<h3>Kaufland, Bukarest &ndash; Parkplatz bei laufendem Betrieb</h3>
-<p class="ref-card-meta">Ort: Bukarest, Rum&auml;nien &middot; Verarbeiter: Lindec</p>
-<p>Auf dem Kundenparkplatz eines Kaufland-Marktes in Bukarest mussten gro&szlig;fl&auml;chige Asphaltsch&auml;den saniert werden &ndash; ohne den laufenden Gesch&auml;ftsbetrieb zu unterbrechen. Mit Rapid Set ARM wurden die Fl&auml;chen so schnell instandgesetzt, dass die Stellpl&auml;tze innerhalb k&uuml;rzester Zeit wieder freigegeben werden konnten. Keine Sperrung, keine Umsatzeinbu&szlig;en, keine Kundenbeschwerden.</p>
-</div>
-</div>
-
-<!-- Referenz 2: KS-Werke -->
-<div class="ref-card">
-<img src="https://www.korodur.de/wp-content/uploads/2024/05/20220521_150227-768x576.jpg" alt="LKW-Ausfahrt Asphaltsanierung KS-Werke Sassenberg mit Rapid Set ARM" class="ref-card-img" width="768" height="576" loading="lazy">
-<div class="ref-card-body">
-<span class="ref-card-badge">Baustoffindustrie</span>
+<span class="ref-card-badge">Autohaus / Gewerbe</span>
 <span class="ref-card-badge">2022</span>
-<span class="ref-card-highlight">Nachkontrolle: 1,5 Jahre intakt</span>
-<h3>KS-Werke W&uuml;seke, Sassenberg &ndash; LKW-Ausfahrt unter Extremlast</h3>
-<p class="ref-card-meta">Ort: Sassenberg-F&uuml;chtorf, Deutschland &middot; Verarbeiter: Knappheide GmbH, Glandorf</p>
-<p>Die LKW-Ausfahrt des KS-Werks war durch t&auml;glichen Schwerlastverkehr schwer besch&auml;digt. Im Mai 2022 wurden zwei Paletten ARM eingebaut &ndash; mit dem Ergebnis, dass die Fl&auml;che seither den Belastungen durch voll beladene LKW standh&auml;lt. Besonderer Beweis: Eine Nachkontrolle im September 2023 &ndash; &uuml;ber 1,5 Jahre sp&auml;ter &ndash; zeigte: Die Fl&auml;che ist intakt.</p>
-<a href="https://www.korodur.de/referenzen/lkw-ausfahrt-wueseke-baustoffwerke-gmbh/" target="_blank" rel="noopener">Referenzprojekt ansehen &rarr;</a>
+<span class="ref-card-highlight">Nachkontrolle Okt. 2023: Alles intakt</span>
+<h3>Autohaus Versmold &ndash; Zufahrt und Hoffl&auml;che</h3>
+<p class="ref-card-meta">Ort: Versmold, Deutschland &middot; Verarbeiter: F &amp; G Bau GmbH</p>
+<p>Die Zufahrt und Hoffl&auml;che eines Autohauses in Versmold waren durch Schlagl&ouml;cher und Frostsch&auml;den stark besch&auml;digt. Im April 2022 wurden s&auml;mtliche Schadstellen mit Rapid Set ARM saniert &ndash; in einem Arbeitstag. Nachkontrolle im Oktober 2023: Alle Stellen intakt, trotz t&auml;glichem Fahrzeugverkehr.</p>
 </div>
 </div>
 
-<!-- Referenz 3: Oelie/Saur -->
+<!-- Referenz 2: Linnenbecker -->
 <div class="ref-card">
-<img src="https://www.korodur.de/wp-content/uploads/2025/03/Bild3.jpg.webp" alt="Gehwegsanierung Saint-&Eacute;tienne mit Rapid Set ARM &ndash; nach 30 Minuten begehbar" class="ref-card-img" width="400" height="220" loading="lazy">
+<img src="../../../assets/arm-frisch-fertig-glatt.jpg" alt="Frisch reparierte Fl&auml;che Au&szlig;enlager Linnenbecker Bad Oeynhausen mit Rapid Set ARM" class="ref-card-img" loading="lazy">
 <div class="ref-card-body">
-<span class="ref-card-badge">&Ouml;ffentlicher Sektor</span>
-<span class="ref-card-badge">2024</span>
-<h3>O&eacute;lie/Saur, Saint-&Eacute;tienne &ndash; Kommunale Gehwegsanierung</h3>
-<p class="ref-card-meta">Ort: Saint-&Eacute;tienne, Frankreich &middot; Verarbeiter: Trema, Saint-Didier-en-Velay</p>
-<p>In Saint-&Eacute;tienne musste ein Gehweg vor einem Parkplatz saniert werden, der durch Fu&szlig;g&auml;nger- und Fahrzeugverkehr stark beansprucht war. Das Versorgungsunternehmen O&eacute;lie/Saur testete verschiedene Systeme &ndash; und entschied sich f&uuml;r ARM. Nach nur 30 Minuten war der Gehweg wieder begehbar. Die Oberfl&auml;che ist rutschfest und passt sich optisch an den bestehenden Belag an.</p>
-<a href="https://www.korodur.de/referenzen/gehwegsanierung-in-saint-etienne/" target="_blank" rel="noopener">Referenzprojekt ansehen &rarr;</a>
+<span class="ref-card-badge">Baufachhandel</span>
+<span class="ref-card-badge">2022</span>
+<h3>Linnenbecker, Bad Oeynhausen &ndash; Au&szlig;enlager unter LKW-Verkehr</h3>
+<p class="ref-card-meta">Ort: Bad Oeynhausen, Deutschland</p>
+<p>Auf dem Au&szlig;enlager des Baufachh&auml;ndlers Linnenbecker wurde im Mai 2022 eine Testfl&auml;che mit ARM angelegt &ndash; unter st&auml;ndigem LKW- und Staplerverkehr. Ergebnis: Hervorragende Best&auml;ndigkeit auch unter h&ouml;chster Beanspruchung.</p>
+<a href="https://www.korodur.de/referenzen/baufachhaendler-linnenbecker-aussenlager-bad-oeynhausen/" target="_blank" rel="noopener">Referenzprojekt ansehen &rarr;</a>
+</div>
+</div>
+</div>
+
+<!-- Vorher / Nachher Bildstrecke -->
+<div class="before-after">
+<h3 style="text-align:center;margin-bottom:24px;">Vorher &rarr; Verarbeitung &rarr; Ergebnis &rarr; Nachkontrolle</h3>
+<div class="ba-grid">
+<div class="ba-item">
+<img src="../../../assets/arm-schaden-grossflaeche.jpg" alt="Gro&szlig;fl&auml;chiger Asphaltschaden vor der Reparatur" loading="lazy">
+<span class="ba-label">Vorher</span>
+</div>
+<div class="ba-item">
+<img src="../../../assets/arm-verarbeitung-werkzeug.jpg" alt="Verarbeitung von Rapid Set ARM mit Kelle und Besen" loading="lazy">
+<span class="ba-label">Verarbeitung</span>
+</div>
+<div class="ba-item">
+<img src="../../../assets/arm-ergebnis-2tage.jpg" alt="Reparierte Stellen 2 Tage nach dem Einbau" loading="lazy">
+<span class="ba-label">2 Tage danach</span>
+</div>
+<div class="ba-item">
+<img src="../../../assets/arm-nachkontrolle-18monate.jpg" alt="Reparaturstelle nach 1,5 Jahren immer noch intakt" loading="lazy">
+<span class="ba-label">1,5 Jahre sp&auml;ter</span>
 </div>
 </div>
 </div>
 
 <blockquote class="testimonial">
 &bdquo;Ein Material, das h&auml;lt, was es verspricht &ndash; und das die Arbeit vor Ort so einfach wie m&ouml;glich macht.&ldquo;
-<cite>&ndash; F &amp; G Bau GmbH, Versmold (Verarbeiter, Autohaus-Sanierung 2023)</cite>
+<cite>&ndash; F &amp; G Bau GmbH, Versmold (Verarbeiter, Autohaus-Sanierung 2022)</cite>
 </blockquote>
 
 <div style="text-align:center;">
-<a href="#kontakt" class="btn btn-primary">Jetzt Aktionsangebot sichern</a>
-<p class="micro-copy">Wir zeigen Ihnen gerne Referenzen aus Ihrer Branche.</p>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
+<p class="micro-copy">Wir zeigen Ihnen gerne weitere Referenzen aus Ihrer Branche.</p>
 </div>
 </div>
 </section>
@@ -704,7 +726,7 @@ footer a:hover { color: var(--white); }
 <li>Verarbeitbar ab 5 &deg;C &ndash; ideal f&uuml;r die Frostsch&auml;den-Saison im Fr&uuml;hjahr</li>
 </ul>
 <p class="ref-hint">Referenz: O&eacute;lie/Saur in Saint-&Eacute;tienne sanierte kommunale Gehwege mit ARM &ndash; begehbar nach 30 Minuten.</p>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 <div class="tab-panel" id="tab-galabau">
 <h3>Zufriedene Kunden. Keine Reklamationen.</h3>
@@ -715,7 +737,7 @@ footer a:hover { color: var(--white); }
 <li>Wettbewerbsvorteil: Bieten Sie Ihren Kunden die bessere Alternative zu Kaltmischgut</li>
 </ul>
 <p class="ref-hint">Referenz: Knappheide GmbH sanierte die LKW-Ausfahrt der KS-Werke &ndash; Fl&auml;che h&auml;lt seit 2022 unter Schwerlast.</p>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 <div class="tab-panel" id="tab-facility">
 <h3>Sichere Fl&auml;chen. Minimale Betriebsunterbrechung.</h3>
@@ -726,7 +748,7 @@ footer a:hover { color: var(--white); }
 <li>Flexible Einbaust&auml;rke von 30&ndash;600 mm f&uuml;r jede Schadenstiefe</li>
 </ul>
 <p class="ref-hint">Referenz: Kaufland Bukarest &ndash; Parkplatzsanierung bei laufendem Gesch&auml;ftsbetrieb, ohne Sperrung der Stellpl&auml;tze.</p>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 <div class="tab-panel" id="tab-verarbeiter">
 <h3>Einfach verarbeiten. Sicher liefern.</h3>
@@ -753,7 +775,7 @@ footer a:hover { color: var(--white); }
 <li>Keine Fr&auml;se, keine Walze &ndash; ein Bautrupp reicht</li>
 <li>Verarbeitbar ab 5 &deg;C &ndash; ideal f&uuml;r die Frostsch&auml;den-Saison</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 </div>
 <div class="accordion-item">
@@ -766,7 +788,7 @@ footer a:hover { color: var(--white); }
 <li>Einfachste Verarbeitung ohne Spezialger&auml;te</li>
 <li>Wettbewerbsvorteil gegenueber Kaltmischgut</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 </div>
 <div class="accordion-item">
@@ -779,7 +801,7 @@ footer a:hover { color: var(--white); }
 <li>Professionelles Erscheinungsbild</li>
 <li>Flexible Einbaust&auml;rke 30&ndash;600 mm</li>
 </ul>
-<a href="#kontakt" class="btn btn-primary" style="margin-top:12px;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 </div>
 <div class="accordion-item">
@@ -810,7 +832,7 @@ footer a:hover { color: var(--white); }
 <div style="font-size:1.2rem;color:var(--white);margin-bottom:12px;">2 Paletten kaufen (2 &times; 48 Sack)</div>
 <div style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--white);margin-bottom:16px;">24 SACK GESCHENKT</div>
 <p style="color:var(--white);opacity:.9;font-size:1rem;margin-bottom:24px;">Genug Material f&uuml;r einen echten Praxistest.<br>Nur bis Ende M&auml;rz 2026. Pro Kunde einmalig.</p>
-<a href="#kontakt" class="btn" style="background:var(--white);color:var(--secondary);border-color:var(--white);font-weight:900;">Jetzt Aktionsangebot sichern</a>
+<a href="https://www.korodur.de/kontakt/" class="btn" style="background:var(--white);color:var(--secondary);border-color:var(--white);font-weight:900;" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 <p style="color:var(--white);font-size:.9rem;margin-top:16px;opacity:.8;">oder direkt anrufen: <a href="tel:+49962147590" style="color:var(--white);font-weight:700;text-decoration:underline;">+49 (0) 9621 47 59-0</a></p>
 </div>
 
@@ -838,9 +860,10 @@ footer a:hover { color: var(--white); }
 <section id="technik" class="bg-white">
 <div class="container">
 <h2>Die Fakten auf einen Blick</h2>
-<p class="section-intro">Rapid Set ASPHALT REPAIR MIX ist ein zementbasiertes, polymerverg&uuml;tetes Reparaturmaterial &ndash; hochfest, spannungsarm und schnellerh&auml;rtend. Hier die wichtigsten Kennwerte:</p>
+<p class="section-intro">Rapid Set ASPHALT REPAIR MIX ist ein zementbasiertes, polymerverg&uuml;tetes Reparaturmaterial &ndash; hochfest, spannungsarm und schnellerh&auml;rtend.</p>
 
-<div style="overflow-x:auto;">
+<div class="technik-layout">
+<div class="technik-table-col">
 <table class="tech-table" aria-label="Technische Daten Rapid Set ASPHALT REPAIR MIX">
 <thead>
 <tr><th>Kennwert</th><th>Wert</th></tr>
@@ -860,6 +883,13 @@ footer a:hover { color: var(--white); }
 <tr><td>Belastbar nach</td><td>ca. 1 Stunde</td></tr>
 </tbody>
 </table>
+</div>
+<div class="technik-image-col">
+<div style="border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--shadow);">
+<img src="../../../assets/arm-team-vorbereitung.jpg" alt="KORODUR-Team bei der Verarbeitung von Rapid Set ASPHALT REPAIR MIX" style="width:100%;height:auto;display:block;" loading="lazy">
+<p style="font-size:.85rem;color:#5a6a7a;padding:12px 16px;background:var(--light-gray);margin:0;text-align:center;">Verarbeitung vor Ort &ndash; Autohaus Versmold, April 2022</p>
+</div>
+</div>
 </div>
 
 <h3 style="margin-top:32px;">Leistungsmerkmale</h3>
@@ -937,171 +967,50 @@ footer a:hover { color: var(--white); }
 </div>
 </section>
 
-<!-- ==================== CTA / KONTAKTFORMULAR ==================== -->
+<!-- ==================== CTA / KONTAKT ==================== -->
 <section id="kontakt" class="bg-white">
 <div class="container">
 <h2 style="text-align:center;">Jetzt Fr&uuml;hjahrsaktion sichern</h2>
-<p class="section-intro" style="text-align:center;margin:0 auto 32px;">Sichern Sie sich jetzt das Aktionsangebot: 2 Paletten kaufen, 24 Sack geschenkt. In zwei Schritten zur pers&ouml;nlichen Beratung.</p>
+<p class="section-intro" style="text-align:center;margin:0 auto 32px;max-width:640px;">Sichern Sie sich das Aktionsangebot: 2 Paletten kaufen, 24 Sack geschenkt. Sprechen Sie direkt mit unseren Experten.</p>
 
-<div class="form-steps-visual">
-<div class="form-step-item"><div class="step-circle">1</div><p>Projekt beschreiben</p></div>
-<div class="form-step-item"><div class="step-circle">2</div><p>Kontaktdaten eingeben</p></div>
+<div class="cta-box">
+<div class="cta-box-primary">
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
+<p class="micro-copy" style="margin-top:12px;">Weiterleitung zur KORODUR-Kontaktseite</p>
 </div>
-
-<div class="form-wrapper" id="contact-form-wrapper">
-<div class="progress-bar"><div class="progress-step active"></div><div class="progress-step"></div></div>
-<div class="progress-label">Schritt 1 von 2: Ihr Projekt</div>
-
-<form id="contact-form" novalidate>
-<!-- Step 1 -->
-<div class="form-step active" data-step="1">
-<div class="form-group">
-<label for="rolle">Ihre Rolle *</label>
-<select id="rolle" name="rolle" required>
-<option value="">Bitte w&auml;hlen...</option>
-<option value="kommune">Kommune / Tiefbauamt</option>
-<option value="galabau">GaLa-Bau / Stra&szlig;enbauunternehmen</option>
-<option value="facility">Facility Management / Industrieunternehmen</option>
-<option value="verarbeiter">Verarbeiter / Handwerker</option>
-<option value="sonstiges">Sonstiges</option>
-</select>
-<span class="error-msg">Bitte w&auml;hlen Sie Ihre Rolle aus.</span>
-</div>
-<div class="form-group">
-<label for="anwendungsfall">Ihr Anwendungsfall *</label>
-<select id="anwendungsfall" name="anwendungsfall" required>
-<option value="">Bitte w&auml;hlen...</option>
-<option value="schlagloecher">Schlagl&ouml;cher reparieren</option>
-<option value="schacht">Schachtabdeckungen / Rinneneinl&auml;ufe sanieren</option>
-<option value="flaeche">Fl&auml;chensanierung (Parkplatz, Zufahrt, Hoffl&auml;che)</option>
-<option value="sonstiges">Sonstiges</option>
-</select>
-<span class="error-msg">Bitte w&auml;hlen Sie Ihren Anwendungsfall aus.</span>
-</div>
-<div class="form-group">
-<label style="display:flex;align-items:center;gap:8px;font-weight:400;cursor:pointer;">
-<input type="checkbox" id="musterverlegung" name="musterverlegung" style="min-width:18px;min-height:18px;">
-Ich m&ouml;chte eine Musterverlegung / Vor-Ort-Demo anfragen
-</label>
-</div>
-<div class="form-nav">
-<button type="button" class="btn btn-primary" id="btn-next">Weiter zu Schritt 2</button>
+<div class="cta-box-divider"><span>oder</span></div>
+<div class="cta-box-phone">
+<p style="font-weight:700;font-size:1.1rem;margin-bottom:8px;">Direkt anrufen</p>
+<p style="font-size:1.6rem;font-weight:900;margin-bottom:4px;"><a href="tel:+49962147590" style="color:var(--secondary);">+49 (0) 9621 47 59-0</a></p>
+<p class="micro-copy">Mo&ndash;Fr, 8:00&ndash;17:00 Uhr</p>
 </div>
 </div>
 
-<!-- Step 2 -->
-<div class="form-step" data-step="2">
-<div class="form-group">
-<label for="name">Ihr Name *</label>
-<input type="text" id="name" name="name" placeholder="Vor- und Nachname" required>
-<span class="error-msg">Bitte geben Sie Ihren Namen ein.</span>
-</div>
-<div class="form-group">
-<label for="firma">Firma / Organisation *</label>
-<input type="text" id="firma" name="firma" placeholder="Unternehmen / Beh&ouml;rde" required>
-<span class="error-msg">Bitte geben Sie Ihre Firma ein.</span>
-</div>
-<div class="form-group">
-<label for="email">E-Mail *</label>
-<input type="email" id="email" name="email" placeholder="ihre@email.de" required>
-<span class="error-msg">Bitte geben Sie eine g&uuml;ltige E-Mail-Adresse ein.</span>
-</div>
-<div class="form-group">
-<label for="telefon">Telefon <span style="font-weight:400;color:#5a6a7a;">(f&uuml;r R&uuml;ckfragen &ndash; optional)</span></label>
-<input type="tel" id="telefon" name="telefon" placeholder="+49...">
-</div>
-
-<button type="button" class="details-toggle" id="details-toggle">Weitere Projektdetails angeben (optional)</button>
-<div class="extra-fields" id="extra-fields">
-<div class="form-group">
-<label for="flaeche">Gesch&auml;tzte Fl&auml;che (m&sup2;)</label>
-<input type="number" id="flaeche" name="flaeche" placeholder="z. B. 50">
-</div>
-<div class="form-group">
-<label for="zeitraum">Gew&uuml;nschter Zeitraum</label>
-<select id="zeitraum" name="zeitraum">
-<option value="">Bitte w&auml;hlen...</option>
-<option value="asap">So bald wie m&ouml;glich</option>
-<option value="4wochen">Innerhalb von 4 Wochen</option>
-<option value="langfristig">Langfristig planen</option>
-</select>
-</div>
-<div class="form-group">
-<label for="nachricht">Nachricht (optional)</label>
-<textarea id="nachricht" name="nachricht" rows="3" placeholder="Weitere Informationen zu Ihrem Projekt..."></textarea>
-</div>
-</div>
-
-<div class="form-consent">
-<input type="checkbox" id="datenschutz" name="datenschutz" required>
-<label for="datenschutz">Ich stimme der Verarbeitung meiner Daten gem&auml;&szlig; der <a href="https://www.korodur.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerkl&auml;rung</a> zu. *</label>
-</div>
-
-<div class="form-nav" style="margin-top:20px;">
-<button type="button" class="btn btn-ghost" id="btn-back">Zur&uuml;ck</button>
-<button type="submit" class="btn btn-primary">Aktionsangebot anfragen</button>
-</div>
-</div>
-</form>
-
-<div class="form-success" id="form-success">
-<h3>Vielen Dank f&uuml;r Ihre Anfrage!</h3>
-<p>Wir haben Ihre Nachricht erhalten. Ein KORODUR-Berater meldet sich innerhalb von 48 Stunden bei Ihnen &ndash; mit einer individuellen Empfehlung f&uuml;r Ihr Projekt.</p>
-<a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" class="btn btn-ghost" style="margin-top:16px;" target="_blank" rel="noopener">Datenblatt jetzt herunterladen (PDF)</a>
-</div>
-
-<ul class="form-trust-list">
-<li><span class="t-icon">&#10003;</span> Kostenlos und unverbindlich</li>
-<li><span class="t-icon">&#10003;</span> Antwort innerhalb von 48 Stunden</li>
-<li><span class="t-icon">&#10003;</span> Kein Vertriebsdruck &ndash; nur ehrliche Beratung</li>
-<li><span class="t-icon">&#10003;</span> Keine Weitergabe an Dritte. Ihre Daten bleiben bei KORODUR.</li>
-</ul>
-</div>
-
-<div class="secondary-ctas">
-<p>Noch nicht so weit? Dann laden Sie zuerst unser Datenblatt herunter:</p>
-<a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Datenblatt herunterladen (PDF)</a>
-</div>
-
-<div class="contact-info">
-<h3>Kontakt</h3>
-<p><strong>KORODUR International GmbH</strong><br>Wernher-von-Braun-Str. 4<br>92224 Amberg</p>
-<p><a href="mailto:info@korodur.de">info@korodur.de</a><br><a href="tel:+49962147590">+49 (0) 9621 47 59-0</a><br>Fax: +49 (0) 9621 32 341</p>
-</div>
-<div style="text-align:center;margin-top:32px;padding:24px;background:var(--light-gray);border-radius:var(--card-radius);">
-<p style="font-weight:700;font-size:1.1rem;margin-bottom:8px;">Lieber direkt sprechen?</p>
-<p style="font-size:1.4rem;font-weight:900;color:var(--secondary);margin-bottom:4px;"><a href="tel:+49962147590" style="color:var(--secondary);">+49 (0) 9621 47 59-0</a></p>
-<p class="micro-copy">Unsere Berater helfen Ihnen gerne &ndash; auch zum Aktionsangebot.</p>
-</div>
 </div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
 <footer>
 <div class="container">
-<div class="footer-grid">
-<div>
-<div class="footer-brand"><img src="../../../assets/korodur-logo.png" alt="KORODUR" height="48" style="filter:brightness(0) invert(1);margin-bottom:8px;"></div>
-<p>KORODUR International GmbH<br>Wernher-von-Braun-Str. 4<br>92224 Amberg<br>Tel: <a href="tel:+49962147590">+49 (0) 9621 47 59-0</a><br>Fax: +49 (0) 9621 32 341<br><a href="mailto:info@korodur.de">info@korodur.de</a></p>
+<div class="footer-compact">
+<div class="footer-left">
+<img src="../../../assets/korodur-logo.png" alt="KORODUR International GmbH" height="32" style="margin-bottom:12px;">
+<p>KORODUR International GmbH &middot; Wernher-von-Braun-Str. 4 &middot; 92224 Amberg<br>
+<a href="tel:+49962147590">+49 (0) 9621 47 59-0</a> &middot; <a href="mailto:info@korodur.de">info@korodur.de</a></p>
 </div>
-<div>
-<div class="footer-links">
+<div class="footer-right">
 <a href="https://www.korodur.de/impressum/" target="_blank" rel="noopener">Impressum</a>
 <a href="https://www.korodur.de/datenschutz/" target="_blank" rel="noopener">Datenschutz</a>
-<a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" target="_blank" rel="noopener">Datenblatt (PDF)</a>
-<a href="https://www.korodur.de/produkte/" target="_blank" rel="noopener">Alle KORODUR Produkte</a>
-<a href="https://www.korodur.de/unternehmen/" target="_blank" rel="noopener">&Uuml;ber KORODUR &ndash; seit 1936</a>
+<a href="https://www.korodur.de/produkte/" target="_blank" rel="noopener">Produkte</a>
+<a href="https://www.korodur.de/unternehmen/" target="_blank" rel="noopener">&Uuml;ber KORODUR</a>
 </div>
 </div>
-</div>
-<div class="footer-bottom">KORODUR &ndash; Reparatursysteme und Industrieb&ouml;den seit 1936. Made in Germany.</div>
 </div>
 </footer>
 
 <!-- STICKY CTA (Mobile, CRO Quick Win #4) -->
 <div class="sticky-cta" id="sticky-cta">
-<a href="#kontakt" class="btn btn-primary">Jetzt Aktionsangebot sichern</a>
-<a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" class="btn btn-ghost btn-pdf-small" target="_blank" rel="noopener" aria-label="PDF herunterladen">PDF</a>
+<a href="https://www.korodur.de/kontakt/" class="btn btn-primary" target="_blank" rel="noopener">Jetzt Aktionsangebot sichern</a>
 </div>
 
 <!-- COOKIE BANNER -->
@@ -1188,65 +1097,7 @@ document.querySelectorAll('.faq-question').forEach(function(q){
   });
 });
 
-/* ===== MULTI-STEP FORM ===== */
-var form = document.getElementById('contact-form');
-var steps = document.querySelectorAll('.form-step');
-var progressSteps = document.querySelectorAll('.progress-step');
-var progressLabel = document.querySelector('.progress-label');
-var currentStep = 1;
-
-function showStep(n) {
-  steps.forEach(function(s){ s.classList.remove('active'); });
-  progressSteps.forEach(function(p, i){ p.classList.toggle('active', i < n); });
-  var target = document.querySelector('.form-step[data-step="' + n + '"]');
-  if (target) target.classList.add('active');
-  var labels = ['Schritt 1 von 2: Ihr Projekt', 'Schritt 2 von 2: Ihre Kontaktdaten'];
-  progressLabel.textContent = labels[n - 1] || '';
-  currentStep = n;
-}
-
-document.getElementById('btn-next').addEventListener('click', function(){
-  var rolle = document.getElementById('rolle');
-  var anwendungsfall = document.getElementById('anwendungsfall');
-  var valid = true;
-  if (!rolle.value) { rolle.parentElement.classList.add('has-error'); valid = false; } else { rolle.parentElement.classList.remove('has-error'); }
-  if (!anwendungsfall.value) { anwendungsfall.parentElement.classList.add('has-error'); valid = false; } else { anwendungsfall.parentElement.classList.remove('has-error'); }
-  if (valid) showStep(2);
-});
-
-document.getElementById('btn-back').addEventListener('click', function(){ showStep(1); });
-
-/* Details toggle */
-var detailsToggle = document.getElementById('details-toggle');
-var extraFields = document.getElementById('extra-fields');
-detailsToggle.addEventListener('click', function(){
-  detailsToggle.classList.toggle('open');
-  if (extraFields.style.maxHeight) { extraFields.style.maxHeight = null; }
-  else { extraFields.style.maxHeight = extraFields.scrollHeight + 'px'; }
-});
-
-/* Form submit */
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  var nameF = document.getElementById('name');
-  var firmaF = document.getElementById('firma');
-  var emailF = document.getElementById('email');
-  var datenschutzF = document.getElementById('datenschutz');
-  var valid = true;
-
-  if (!nameF.value.trim()) { nameF.parentElement.classList.add('has-error'); valid = false; } else { nameF.parentElement.classList.remove('has-error'); }
-  if (!firmaF.value.trim()) { firmaF.parentElement.classList.add('has-error'); valid = false; } else { firmaF.parentElement.classList.remove('has-error'); }
-  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRe.test(emailF.value)) { emailF.parentElement.classList.add('has-error'); valid = false; } else { emailF.parentElement.classList.remove('has-error'); }
-  if (!datenschutzF.checked) { datenschutzF.parentElement.style.color = '#d32f2f'; valid = false; } else { datenschutzF.parentElement.style.color = ''; }
-
-  if (valid) {
-    form.style.display = 'none';
-    document.querySelector('.progress-bar').style.display = 'none';
-    document.querySelector('.progress-label').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
-});
+/* ===== (Form removed – CTA links to korodur.de/kontakt) ===== */
 
 /* ===== STICKY CTA (IntersectionObserver, CRO Quick Win #4) ===== */
 var stickyCta = document.getElementById('sticky-cta');
