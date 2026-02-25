@@ -45,12 +45,24 @@ Phase 4: Launch (parallel)
   - CRO --> Tracking & A/B-Tests
 ```
 
+## Live Landing Pages
+
+**Übersichtsseite:** https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/
+
+| Produkt | Vollversion | Kurzversion |
+|---------|------------|-------------|
+| **Rapid Set ARM** | [Vollversion](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html) | [Kurzversion](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index-short.html) |
+| **NEODUR Level** | [Vollversion](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-neodur-autostore/landing-page/index.html) | [Kurzversion](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-neodur-autostore/landing-page/index-short.html) |
+
 ## Projektstruktur
 
 ```
+index.html        # Übersichtsseite (GitHub Pages Root)
 agents/           # Agent-Definitionen (SKILL.md pro Agent)
 workflows/        # Workflow-Definitionen
 templates/        # Vorlagen (Briefings, etc.)
+projekte/         # Landing Pages und Projektdateien
+assets/           # Gemeinsame Assets (Logo, etc.)
 ```
 
 ## Quellen & Inspiration
