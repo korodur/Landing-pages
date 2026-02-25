@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Pages – Übersicht | KORODUR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #002d59;
+  --secondary: #009ee3;
+  --light-gray: #ececed;
+  --white: #ffffff;
+  --font: "Gabarito", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  color: var(--primary);
+  background: var(--light-gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--primary);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+header img {
+  height: 40px;
+  width: auto;
+}
+
+main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  color: var(--primary);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #334;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  transition: color 0.2s;
+}
+
+.card-links a:hover {
+  color: var(--primary);
+}
+
+.card-links a::before {
+  content: "\2192";
+}
+
+footer {
+  background: var(--primary);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="assets/korodur-logo.png" alt="KORODUR Logo">
+</header>
+
+<main>
+  <h1>Landing Pages &ndash; &Uuml;bersicht</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h2>Rapid Set ARM</h2>
+      <p>Asphalt Repair Mix &ndash; dauerhafte Asphaltreparatur ohne Hei&szlig;asphalt. Begehbar nach 30&nbsp;Minuten, belastbar nach ca.&nbsp;1&nbsp;Stunde.</p>
+      <div class="card-links">
+        <a href="projekte/korodur-asphalt-repair-mix/landing-page/index.html">Vollversion</a>
+        <a href="projekte/korodur-asphalt-repair-mix/landing-page/index-short.html">Kurzversion</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>NEODUR Level</h2>
+      <p>Selbstverlaufender D&uuml;nnschichtestrich f&uuml;r AutoStore &amp; Shuttle-Systeme. Begehbar nach 3&nbsp;Std., C40&nbsp;Druckfestigkeit.</p>
+      <div class="card-links">
+        <a href="projekte/korodur-neodur-autostore/landing-page/index.html">Vollversion</a>
+        <a href="projekte/korodur-neodur-autostore/landing-page/index-short.html">Kurzversion</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; KORODUR International GmbH
+</footer>
+
+</body>
+</html>
