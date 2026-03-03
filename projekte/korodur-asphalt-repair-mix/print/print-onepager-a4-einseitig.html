@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapid Set ASPHALT REPAIR MIX – Frostschäden? Einmal reparieren. Dauerhaft halten.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --primary: #002d59;
+  --secondary: #009ee3;
+  --light-gray: #ececed;
+  --mid-gray: #d9dada;
+  --white: #ffffff;
+  --font: "Gabarito", Arial, sans-serif;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  color: var(--primary);
+  line-height: 1.45;
+  background: var(--white);
+  font-size: 10pt;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* ===== PAGE LAYOUT (DIN A4) ===== */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  max-height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 15mm;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== ZONE 1: HEADER + HEADLINE + KEY FIGURES ===== */
+.zone-1 { flex-shrink: 0; }
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5mm;
+}
+.logo img {
+  height: 18mm;
+  width: auto;
+}
+.product-img {
+  height: 38mm;
+  width: auto;
+  object-fit: contain;
+}
+
+.headline {
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 2mm;
+}
+.headline-frost {
+  font-size: 20pt;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: 1mm;
+}
+.headline-main {
+  font-size: 26pt;
+  color: var(--primary);
+  display: block;
+}
+
+.sub-headline {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4mm;
+  line-height: 1.35;
+}
+
+.key-figures {
+  display: flex;
+  justify-content: space-between;
+  gap: 3mm;
+  margin-bottom: 4mm;
+  padding: 3mm 0;
+  border-top: 0.5pt solid var(--mid-gray);
+  border-bottom: 0.5pt solid var(--mid-gray);
+}
+.key-figure {
+  flex: 1;
+  text-align: center;
+  padding: 2mm 1mm;
+}
+.key-figure:not(:last-child) {
+  border-right: 0.5pt solid var(--mid-gray);
+}
+.key-figure .number {
+  font-size: 18pt;
+  font-weight: 900;
+  color: var(--secondary);
+  display: block;
+  line-height: 1.1;
+}
+.key-figure .label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-top: 1mm;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ===== ZONE 2: PROBLEM + LÖSUNG ===== */
+.zone-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.two-col {
+  display: flex;
+  gap: 5mm;
+  margin-bottom: 3mm;
+}
+.col-problem {
+  flex: 1;
+}
+.col-solution {
+  flex: 1;
+}
+
+.section-label {
+  font-size: 8pt;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2mm;
+}
+
+.problem-text {
+  font-size: 9pt;
+  line-height: 1.5;
+}
+
+.steps {
+  list-style: none;
+}
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5mm;
+  margin-bottom: 2.5mm;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 6mm;
+  height: 6mm;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--white);
+  font-size: 8pt;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3mm;
+}
+.step-content {
+  flex: 1;
+}
+.step-name {
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--primary);
+}
+.step-desc {
+  font-size: 8pt;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+/* Photo strip */
+.photo-strip {
+  display: flex;
+  gap: 2mm;
+  margin-bottom: 3mm;
+  height: 28mm;
+  overflow: hidden;
+  border-radius: 2mm;
+}
+.photo-strip img {
+  flex: 1;
+  object-fit: cover;
+  border-radius: 2mm;
+  min-width: 0;
+}
+
+/* ===== ZONE 3: REFERENZ + QR-CODE ===== */
+.zone-3 { flex-shrink: 0; }
+
+.zone-3-divider {
+  border: none;
+  border-top: 0.5pt solid var(--mid-gray);
+  margin-bottom: 3mm;
+}
+
+.proof-row {
+  display: flex;
+  gap: 5mm;
+  align-items: flex-start;
+  margin-bottom: 3mm;
+}
+
+.reference-box {
+  flex: 1;
+  background: var(--light-gray);
+  padding: 3mm 4mm;
+  border-radius: 2mm;
+  border-left: 3pt solid var(--secondary);
+}
+.reference-label {
+  font-size: 8pt;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5mm;
+}
+.reference-text {
+  font-size: 8.5pt;
+  line-height: 1.45;
+}
+.reference-project {
+  font-weight: 700;
+}
+
+.qr-box {
+  width: 52mm;
+  flex-shrink: 0;
+  background: var(--light-gray);
+  padding: 3mm;
+  border-radius: 2mm;
+  text-align: center;
+  border: 0.5pt solid var(--mid-gray);
+}
+.qr-label {
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2mm;
+  line-height: 1.3;
+}
+.qr-code {
+  width: 30mm;
+  height: 30mm;
+  margin: 0 auto 2mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-code svg {
+  width: 100%;
+  height: 100%;
+}
+.qr-url {
+  font-size: 7pt;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  flex-shrink: 0;
+  border-top: 0.5pt solid var(--mid-gray);
+  padding-top: 2mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7.5pt;
+  color: var(--primary);
+}
+.footer-dealer {
+  font-style: italic;
+  opacity: 0.7;
+}
+.footer-contact {
+  font-weight: 700;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    page-break-after: avoid;
+    overflow: hidden;
+  }
+}
+
+/* ===== SCREEN PREVIEW ===== */
+@media screen {
+  body {
+    background: #e0e0e0;
+    padding: 20px 0;
+  }
+  .page {
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ===== ZONE 1: ABSENDER + VERSPRECHEN ===== -->
+  <div class="zone-1">
+    <div class="header-row">
+      <div class="logo">
+        <img src="../../../assets/korodur-logo.png" alt="KORODUR International GmbH">
+      </div>
+      <img class="product-img" src="../../../assets/Asphalt Repair Mix_30 Minuten.png" alt="Rapid Set ASPHALT REPAIR MIX – 25-kg-Sack">
+    </div>
+
+    <div class="headline">
+      <span class="headline-frost">Frostschäden?</span>
+      <span class="headline-main">Einmal reparieren. Dauerhaft halten.</span>
+    </div>
+
+    <div class="sub-headline">
+      Rapid Set ASPHALT REPAIR MIX – die schnelle, einfache und dauerhafte Alternative zu Kaltmischgut.
+    </div>
+
+    <div class="key-figures">
+      <div class="key-figure">
+        <span class="number">30 Min.</span>
+        <span class="label">begehbar</span>
+      </div>
+      <div class="key-figure">
+        <span class="number">30–600 mm</span>
+        <span class="label">Einbaustärke</span>
+      </div>
+      <div class="key-figure">
+        <span class="number">38 N/mm²</span>
+        <span class="label">Druckfestigkeit</span>
+      </div>
+      <div class="key-figure">
+        <span class="number">50+</span>
+        <span class="label">Referenzprojekte</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ZONE 2: PROBLEM + LÖSUNG ===== -->
+  <div class="zone-2">
+    <div class="two-col">
+      <div class="col-problem">
+        <div class="section-label">Das Problem</div>
+        <div class="problem-text">
+          Jedes Frühjahr dasselbe Bild: Frostschäden, Schlaglöcher, absackende Schachtabdeckungen auf Ihren Flächen. Kaltmischgut hält Wochen, nicht Jahre – und Heißasphalt braucht Fräse, Walze und Budget. Rapid Set ARM bietet eine dritte Option: dauerhaft, einfach und in 30 Minuten begehbar.
+        </div>
+      </div>
+      <div class="col-solution">
+        <div class="section-label">So funktioniert's</div>
+        <ul class="steps">
+          <li class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-name">Vorbereiten</div>
+              <div class="step-desc">Schadstelle reinigen und vornässen</div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-name">Anmischen</div>
+              <div class="step-desc">Sack öffnen, Wasser zugeben</div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-name">Einbauen</div>
+              <div class="step-desc">Einfüllen, abziehen, verdichten</div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="step-name">Fertig</div>
+              <div class="step-desc">Begehbar nach 30 Minuten</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Photo strip -->
+    <div class="photo-strip">
+      <img src="../../../assets/arm-schaden-schlagloecher.jpg" alt="Frostschäden – Ausgangslage vor der Reparatur">
+      <img src="../../../assets/arm-verarbeitung-werkzeug.jpg" alt="Rapid Set ARM – Verarbeitung auf der Baustelle">
+      <img src="../../../assets/arm-nachkontrolle-18monate.jpg" alt="Nachkontrolle nach 18 Monaten – Fläche intakt">
+    </div>
+  </div>
+
+  <!-- ===== ZONE 3: BEWEIS + HANDLUNG ===== -->
+  <div class="zone-3">
+    <hr class="zone-3-divider">
+
+    <div class="proof-row">
+      <div class="reference-box">
+        <div class="reference-label">Bewährt in der Praxis</div>
+        <div class="reference-text">
+          <span class="reference-project">KS-Werke Wüseke, 2022:</span> LKW-Ausfahrt mit ARM saniert. Nachkontrolle nach 1,5 Jahren bestätigt – Fläche intakt unter täglichem Schwerlastverkehr.
+        </div>
+      </div>
+      <div class="qr-box">
+        <div class="qr-label">Alle Fakten, Referenzen und Datenblatt online:</div>
+        <div class="qr-code" id="qrcode"></div>
+        <div class="qr-url">korodur.de</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-dealer">Rapid Set ASPHALT REPAIR MIX ist über den Baustoffhandel erhältlich.</div>
+      <div class="footer-contact">KORODUR International GmbH | +49 (0) 9621 47 59-0 | info@korodur.de</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- QR Code: qrcode-generator (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(function() {
+  var qr = qrcode(0, 'M');
+  qr.addData('https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html');
+  qr.make();
+
+  var count = qr.getModuleCount();
+  var cellSize = 4;
+  var size = count * cellSize;
+
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + size + ' ' + size + '" shape-rendering="crispEdges">';
+  svg += '<rect width="' + size + '" height="' + size + '" fill="#ffffff"/>';
+
+  for (var r = 0; r < count; r++) {
+    for (var c = 0; c < count; c++) {
+      if (qr.isDark(r, c)) {
+        svg += '<rect x="' + (c * cellSize) + '" y="' + (r * cellSize) + '" width="' + cellSize + '" height="' + cellSize + '" fill="#002d59"/>';
+      }
+    }
+  }
+  svg += '</svg>';
+  document.getElementById('qrcode').innerHTML = svg;
+})();
+</script>
+
+</body>
+</html>

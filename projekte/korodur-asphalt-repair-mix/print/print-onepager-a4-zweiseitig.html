@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapid Set ASPHALT REPAIR MIX – Frostschäden? Einmal reparieren. Dauerhaft halten.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --primary: #002d59;
+  --secondary: #009ee3;
+  --light-gray: #ececed;
+  --mid-gray: #d9dada;
+  --white: #ffffff;
+  --font: "Gabarito", Arial, sans-serif;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  color: var(--primary);
+  line-height: 1.45;
+  background: var(--white);
+  font-size: 10pt;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* ===== PAGE LAYOUT (DIN A4) ===== */
+.page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+  max-height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 15mm;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+}
+.page:last-child {
+  page-break-after: avoid;
+}
+
+/* ===== SHARED STYLES ===== */
+.section-label {
+  font-size: 8.5pt;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5mm;
+}
+.section-title {
+  font-size: 13pt;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 3mm;
+}
+.divider {
+  border: none;
+  border-top: 0.5pt solid var(--mid-gray);
+  margin: 3mm 0;
+}
+
+/* ================================================================
+   PAGE 1: VORDERSEITE – "DAS VERSPRECHEN"
+   ================================================================ */
+
+/* Header */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5mm;
+}
+.logo img {
+  height: 18mm;
+  width: auto;
+}
+.product-img {
+  height: 42mm;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Headline */
+.headline {
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 3mm;
+}
+.headline-frost {
+  font-size: 22pt;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: 1mm;
+}
+.headline-main {
+  font-size: 28pt;
+  color: var(--primary);
+  display: block;
+}
+
+/* Sub-headline */
+.sub-headline {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4mm;
+  line-height: 1.4;
+}
+
+/* Key Figures */
+.key-figures {
+  display: flex;
+  justify-content: space-between;
+  gap: 3mm;
+  margin-bottom: 5mm;
+  padding: 3.5mm 0;
+  border-top: 0.5pt solid var(--mid-gray);
+  border-bottom: 0.5pt solid var(--mid-gray);
+}
+.key-figure {
+  flex: 1;
+  text-align: center;
+  padding: 2mm 1mm;
+}
+.key-figure:not(:last-child) {
+  border-right: 0.5pt solid var(--mid-gray);
+}
+.key-figure .number {
+  font-size: 20pt;
+  font-weight: 900;
+  color: var(--secondary);
+  display: block;
+  line-height: 1.1;
+}
+.key-figure .label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-top: 1mm;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Two-column Problem + Solution */
+.two-col {
+  display: flex;
+  gap: 6mm;
+  flex: 1;
+}
+.col-problem { flex: 1; }
+.col-solution { flex: 1; }
+
+.problem-text {
+  font-size: 9.5pt;
+  line-height: 1.55;
+}
+
+/* Steps (detailed, Variante B) */
+.steps { list-style: none; }
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5mm;
+  margin-bottom: 3mm;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 6.5mm;
+  height: 6.5mm;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--white);
+  font-size: 8.5pt;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3mm;
+}
+.step-content { flex: 1; }
+.step-name {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--primary);
+}
+.step-desc {
+  font-size: 8.5pt;
+  color: var(--primary);
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Bridge Statement */
+.bridge {
+  background: var(--light-gray);
+  padding: 3mm 4mm;
+  border-radius: 2mm;
+  font-size: 9.5pt;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 3mm;
+  flex-shrink: 0;
+}
+
+/* Flip hint */
+.flip-hint {
+  text-align: right;
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-top: 2mm;
+  flex-shrink: 0;
+}
+
+/* ================================================================
+   PAGE 2: RÜCKSEITE – "DER BEWEIS"
+   ================================================================ */
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4mm;
+  font-size: 8.5pt;
+}
+.comparison-table th {
+  padding: 2.5mm 3mm;
+  text-align: center;
+  font-weight: 700;
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.comparison-table th:first-child {
+  text-align: left;
+  background: var(--white);
+  color: var(--primary);
+}
+.comparison-table th.arm-col {
+  background: var(--secondary);
+  color: var(--white);
+}
+.comparison-table th.other-col {
+  background: var(--primary);
+  color: var(--white);
+}
+.comparison-table td {
+  padding: 2mm 3mm;
+  text-align: center;
+  border-bottom: 0.3pt solid var(--mid-gray);
+  font-size: 8.5pt;
+}
+.comparison-table td:first-child {
+  font-weight: 700;
+  text-align: left;
+}
+.comparison-table td.arm-val {
+  font-weight: 700;
+  color: var(--secondary);
+  background: rgba(0, 158, 227, 0.06);
+}
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.table-footnotes {
+  font-size: 7pt;
+  color: var(--primary);
+  opacity: 0.6;
+  margin-bottom: 4mm;
+}
+
+/* Reference Cards */
+.references { margin-bottom: 3mm; }
+.ref-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 3mm;
+  margin-bottom: 2.5mm;
+  padding: 2.5mm 3mm;
+  background: var(--light-gray);
+  border-radius: 2mm;
+}
+.ref-icon {
+  flex-shrink: 0;
+  width: 5mm;
+  height: 5mm;
+  margin-top: 0.5mm;
+  color: var(--secondary);
+}
+.ref-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.ref-content { flex: 1; }
+.ref-project {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: var(--primary);
+}
+.ref-text {
+  font-size: 8pt;
+  line-height: 1.4;
+  color: var(--primary);
+}
+
+/* Testimonial */
+.testimonial {
+  border-left: 3pt solid var(--secondary);
+  padding: 3mm 4mm;
+  margin-bottom: 4mm;
+  font-size: 10pt;
+  font-style: italic;
+  line-height: 1.5;
+}
+.testimonial cite {
+  display: block;
+  margin-top: 1.5mm;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: var(--secondary);
+}
+
+/* QR Section */
+.qr-section {
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+  background: var(--light-gray);
+  padding: 4mm 5mm;
+  border-radius: 2mm;
+  border: 0.5pt solid var(--mid-gray);
+  margin-bottom: 3mm;
+}
+.qr-code {
+  width: 30mm;
+  height: 30mm;
+  flex-shrink: 0;
+}
+.qr-code svg { width: 100%; height: 100%; }
+.qr-text { flex: 1; }
+.qr-label {
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1mm;
+  line-height: 1.3;
+}
+.qr-url {
+  font-size: 8pt;
+  color: var(--secondary);
+  font-weight: 700;
+}
+.qr-phone-icon {
+  display: inline-block;
+  width: 3.5mm;
+  height: 3.5mm;
+  vertical-align: middle;
+  margin-right: 1mm;
+}
+
+/* Dealer hint */
+.dealer-hint {
+  font-size: 8.5pt;
+  margin-bottom: 3mm;
+  line-height: 1.4;
+}
+
+/* Footer (Page 2) */
+.footer-p2 {
+  border-top: 0.5pt solid var(--mid-gray);
+  padding-top: 2mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7.5pt;
+  color: var(--primary);
+  margin-top: auto;
+}
+.footer-p2 .footer-brand {
+  font-weight: 700;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html, body {
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+  }
+}
+
+/* ===== SCREEN PREVIEW ===== */
+@media screen {
+  body {
+    background: #e0e0e0;
+    padding: 20px 0;
+  }
+  .page {
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ================================================================
+     PAGE 1: VORDERSEITE – "DAS VERSPRECHEN"
+     ================================================================ -->
+<div class="page page-front">
+
+  <!-- Header -->
+  <div class="header-row">
+    <div class="logo">
+      <img src="../../../assets/korodur-logo.png" alt="KORODUR International GmbH">
+    </div>
+    <img class="product-img" src="../../../assets/Asphalt Repair Mix_30 Minuten.png" alt="Rapid Set ASPHALT REPAIR MIX – 25-kg-Sack">
+  </div>
+
+  <!-- Headline -->
+  <div class="headline">
+    <span class="headline-frost">Frostschäden?</span>
+    <span class="headline-main">Einmal reparieren. Dauerhaft halten.</span>
+  </div>
+
+  <!-- Sub-Headline (2 Sätze) -->
+  <div class="sub-headline">
+    Rapid Set ASPHALT REPAIR MIX – die schnelle, einfache und dauerhafte Alternative zu Kaltmischgut. Begehbar nach 30 Minuten. Belastbar nach 1 Stunde.
+  </div>
+
+  <!-- Key Figures -->
+  <div class="key-figures">
+    <div class="key-figure">
+      <span class="number">30 Min.</span>
+      <span class="label">begehbar</span>
+    </div>
+    <div class="key-figure">
+      <span class="number">30–600 mm</span>
+      <span class="label">Einbaustärke</span>
+    </div>
+    <div class="key-figure">
+      <span class="number">38 N/mm²</span>
+      <span class="label">Druckfestigkeit</span>
+    </div>
+    <div class="key-figure">
+      <span class="number">50+</span>
+      <span class="label">Referenzprojekte</span>
+    </div>
+  </div>
+
+  <!-- Two-Column: Problem + Solution -->
+  <div class="two-col">
+    <div class="col-problem">
+      <div class="section-label">Das Problem</div>
+      <div class="problem-text">
+        Jedes Frühjahr dasselbe Bild: Frostschäden, Schlaglöcher, absackende Schachtabdeckungen. Parkplätze, Zufahrten, Betriebsflächen – überall zeigen sich die Spuren des Winters.
+        <br><br>
+        Die übliche Lösung heißt Kaltmischgut. Es lässt sich schnell einbauen, hält aber nur Wochen. Dieselbe Stelle mehrfach im Jahr flicken – das kostet Zeit, Material und Geld. Heißasphalt ist dauerhaft, braucht aber Fräse, Walze und Mindestmenge – für einzelne Schadstellen unwirtschaftlich.
+      </div>
+    </div>
+    <div class="col-solution">
+      <div class="section-label">So funktioniert Rapid Set ARM</div>
+      <ul class="steps">
+        <li class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-name">Vorbereiten</div>
+            <div class="step-desc">Losen Belag entfernen, Kanten anschneiden und Schadstelle vornässen.</div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-name">Anmischen</div>
+            <div class="step-desc">25-kg-Sack öffnen, ca. 3,8 Liter Wasser zugeben und mischen.</div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-name">Einbauen</div>
+            <div class="step-desc">Material einfüllen, mit der Latte abziehen und leicht verdichten.</div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-name">Fertig</div>
+            <div class="step-desc">Nach 30 Minuten begehbar, nach ca. 1 Stunde voll belastbar.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bridge Statement -->
+  <div class="bridge">
+    ARM ist kein Asphalt. Es ist ein mineralischer Reparaturmörtel, der aussieht wie Asphalt – sich aber einfacher verarbeiten lässt und dauerhaft hält.
+  </div>
+
+  <!-- Flip hint -->
+  <div class="flip-hint">▶ Vergleich &amp; Referenzen auf der Rückseite</div>
+
+</div>
+
+<!-- ================================================================
+     PAGE 2: RÜCKSEITE – "DER BEWEIS"
+     ================================================================ -->
+<div class="page page-back">
+
+  <!-- Comparison Table -->
+  <div class="section-title">ARM vs. Kaltmischgut vs. Heißasphalt</div>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Kriterium</th>
+        <th class="arm-col">Rapid Set ARM</th>
+        <th class="other-col">Kaltmischgut</th>
+        <th class="other-col">Heißasphalt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Begehbar nach</td>
+        <td class="arm-val">30 Minuten</td>
+        <td>sofort*</td>
+        <td>30–60 Minuten</td>
+      </tr>
+      <tr>
+        <td>Haltbarkeit</td>
+        <td class="arm-val">dauerhaft</td>
+        <td>Wochen</td>
+        <td>dauerhaft</td>
+      </tr>
+      <tr>
+        <td>Spezialgeräte</td>
+        <td class="arm-val">nein</td>
+        <td>nein</td>
+        <td>ja</td>
+      </tr>
+      <tr>
+        <td>Haftbrücke</td>
+        <td class="arm-val">nein</td>
+        <td>teilweise</td>
+        <td>nein</td>
+      </tr>
+      <tr>
+        <td>Einbaustärke</td>
+        <td class="arm-val">30–600 mm</td>
+        <td>20–50 mm</td>
+        <td>30–100 mm</td>
+      </tr>
+      <tr>
+        <td>Gesamtkosten</td>
+        <td class="arm-val">mittel</td>
+        <td>hoch**</td>
+        <td>hoch</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table-footnotes">* instabil &nbsp;&nbsp; ** durch Wiederholung</div>
+
+  <hr class="divider">
+
+  <!-- References -->
+  <div class="section-title">Bewährt in der Praxis</div>
+  <div class="references">
+    <div class="ref-item">
+      <div class="ref-icon">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#009ee3"/></svg>
+      </div>
+      <div class="ref-content">
+        <div class="ref-project">Wüseke Baustoffwerke, Sassenberg (2022)</div>
+        <div class="ref-text">LKW-Ausfahrt mit ARM saniert. Nachkontrolle nach 1,5 Jahren bestätigt – Fläche intakt unter täglichem Schwerlastverkehr.</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-icon">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#009ee3"/></svg>
+      </div>
+      <div class="ref-content">
+        <div class="ref-project">Straßenbau Dieckmann, Versmold (2021)</div>
+        <div class="ref-text">Erstes ARM-Pionierprojekt: Lagerfläche unter täglichem Bagger- und LKW-Verkehr saniert. Hervorragende Beständigkeit seit über 4 Jahren.</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-icon">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#009ee3"/></svg>
+      </div>
+      <div class="ref-content">
+        <div class="ref-project">Kaufland, Bukarest (2025)</div>
+        <div class="ref-text">Parkplatzsanierung bei laufendem Geschäftsbetrieb – ohne Sperrung der Stellplätze. Schnelle Wiederfreigabe für den Kundenverkehr.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <blockquote class="testimonial">
+    „Ein Material, das hält, was es verspricht – und das die Arbeit vor Ort so einfach wie möglich macht."
+    <cite>– F &amp; G Bau GmbH, Versmold</cite>
+  </blockquote>
+
+  <hr class="divider">
+
+  <!-- QR Code Section -->
+  <div class="qr-section">
+    <div class="qr-code" id="qrcode"></div>
+    <div class="qr-text">
+      <div class="qr-label">
+        <svg class="qr-phone-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;width:3.5mm;height:3.5mm;vertical-align:middle;margin-right:1mm"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#002d59" stroke-width="2"/><circle cx="12" cy="18" r="1" fill="#002d59"/></svg>
+        Alle Fakten, Referenzprojekte und das technische Datenblatt online:
+      </div>
+      <div class="qr-url">korodur.de</div>
+    </div>
+  </div>
+
+  <!-- Dealer hint -->
+  <div class="dealer-hint">
+    Erhältlich über den Baustoffhandel – fragen Sie Ihren Händler nach Verfügbarkeit.
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-p2">
+    <span class="footer-brand">KORODUR International GmbH | Amberg</span>
+    <span>+49 (0) 9621 47 59-0 | info@korodur.de | korodur.de</span>
+  </div>
+
+</div>
+
+<!-- QR Code: qrcode-generator (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(function() {
+  var qr = qrcode(0, 'M');
+  qr.addData('https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html');
+  qr.make();
+
+  var count = qr.getModuleCount();
+  var cellSize = 4;
+  var size = count * cellSize;
+
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + size + ' ' + size + '" shape-rendering="crispEdges">';
+  svg += '<rect width="' + size + '" height="' + size + '" fill="#ffffff"/>';
+
+  for (var r = 0; r < count; r++) {
+    for (var c = 0; c < count; c++) {
+      if (qr.isDark(r, c)) {
+        svg += '<rect x="' + (c * cellSize) + '" y="' + (r * cellSize) + '" width="' + cellSize + '" height="' + cellSize + '" fill="#002d59"/>';
+      }
+    }
+  }
+  svg += '</svg>';
+  document.getElementById('qrcode').innerHTML = svg;
+})();
+</script>
+
+</body>
+</html>
