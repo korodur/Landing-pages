@@ -2,7 +2,7 @@
 
 ## Projektbeschreibung
 
-Dieses Projekt definiert ein Team aus 7 KI-Agents für Marketing-Aufgaben, insbesondere die Erstellung von Landing Pages und Vermarktungskonzepten.
+Dieses Projekt definiert ein Team aus 12 KI-Agents für Marketing, Vertrieb und Operations — von Landing Pages über CRM bis IT-Infrastruktur.
 
 ## Agents
 

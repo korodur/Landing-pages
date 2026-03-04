@@ -1,6 +1,6 @@
 # Marketing Team Skills
 
-Ein Team aus 7 KI-Agents, die gemeinsam hochwertige Landing Pages und Vermarktungskonzepte erstellen.
+Ein Team aus 16 KI-Agents für Marketing, Vertrieb und Operations — von Landing Pages über CRM bis IT-Infrastruktur.
 
 ## Konzept
 
@@ -19,6 +19,15 @@ Ein Team aus 7 KI-Agents, die gemeinsam hochwertige Landing Pages und Vermarktun
 | 4 | **CRO-Optimierer** | Conversion-Optimierung, A/B-Tests |
 | 5 | **Growth Manager** | Traffic, E-Mail-Marketing, Paid Ads |
 | 6 | **Landing Page Builder** | Technische Umsetzung der Landing Page |
+| 7 | **Recherche-Agent** | Markt-, Technologie- und Regulatorik-Recherchen |
+| 8 | **CRM-Agent** | Salesforce, Lead-Management, Kampagnen-Setup |
+| 9 | **Notion-Architekt** | Notion-Strukturen, Datenbanken, Formulare |
+| 10 | **Briefing-Agent** | Meeting-Vorbereitung, Status-Reports, Entscheidungsvorlagen |
+| 11 | **DevOps-Agent** | GitHub, CI/CD, Domains, Deployments |
+| 12 | **Konzept-Agent** | Ideen → professionelle 1-2-Seiter |
+| 13 | **Wettbewerbs-Agent** | Wettbewerbsbeobachtung & -analyse |
+| 14 | **Monthly-Report-Agent** | GF-Monatsbericht alle 4 Wochen |
+| 15 | **Übersetzungs-Agent** | DE → EN/FR/PL mit Fachvokabular |
 
 ## Workflow
 
