@@ -82,7 +82,7 @@ Der Frostschaeden-Aufhaenger ist **kein Aktionsangebot**, sondern ein **Problem-
 
 ### QR-Code
 
-- **URL:** `https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html`
+- **URL:** `https://korodur.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html`
 - **Platzierung:** Prominent, aber nicht dominant. Neben einem klaren Handlungshinweis.
 - **Begleittext:** "Alle Fakten, Referenzprojekte und das technische Datenblatt:" oder "Mehr erfahren unter:"
 - **Groesse:** Mindestens 25 x 25 mm fuer zuverlaessiges Scannen

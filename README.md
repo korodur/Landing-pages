@@ -56,13 +56,13 @@ Phase 4: Launch (parallel)
 
 ## Live Landing Pages
 
-**Übersichtsseite:** https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/
+**Übersichtsseite:** https://korodur.github.io/Marketing-Team-Skills/
 
 ### ARM-Kampagne
 
 | Seite | Link | Status |
 |-------|------|--------|
-| **Rapid Set ARM v2 (Produktseite)** | [Live](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html) | Aktuell — wartet auf Kollegen-Feedback |
+| **Rapid Set ARM v2 (Produktseite)** | [Live](https://korodur.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/index.html) | Aktuell — wartet auf Kollegen-Feedback |
 | **Print-Onepager A4 einseitig** | [HTML](projekte/korodur-asphalt-repair-mix/print/print-onepager-a4-einseitig.html) | Fertig (03.03.2026) |
 | **Print-Onepager A4 zweiseitig** | [HTML](projekte/korodur-asphalt-repair-mix/print/print-onepager-a4-zweiseitig.html) | Fertig (03.03.2026) |
 
@@ -72,14 +72,14 @@ Zielgruppe: Endkunden direkt (Kommunen, GaLa-Bau, Facility Manager, Verarbeiter)
 
 | Produkt | Vollversion | Kurzversion |
 |---------|------------|-------------|
-| **NEODUR Level** | [Vollversion](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-neodur-autostore/landing-page/index.html) | [Kurzversion](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-neodur-autostore/landing-page/index-short.html) |
+| **NEODUR Level** | [Vollversion](https://korodur.github.io/Marketing-Team-Skills/projekte/korodur-neodur-autostore/landing-page/index.html) | [Kurzversion](https://korodur.github.io/Marketing-Team-Skills/projekte/korodur-neodur-autostore/landing-page/index-short.html) |
 
 ### Archiv
 
 | Seite | Link | Archiviert |
 |-------|------|------------|
-| ARM v1 Frühjahrsaktion (Voll) | [Ansehen](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/archiv/index-v1-fruehjahrsaktion.html) | 27.02.2026 |
-| ARM v1 Frühjahrsaktion (Kurz) | [Ansehen](https://sfleischmann-3steps2.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/archiv/index-short-v1-fruehjahrsaktion.html) | 27.02.2026 |
+| ARM v1 Frühjahrsaktion (Voll) | [Ansehen](https://korodur.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/archiv/index-v1-fruehjahrsaktion.html) | 27.02.2026 |
+| ARM v1 Frühjahrsaktion (Kurz) | [Ansehen](https://korodur.github.io/Marketing-Team-Skills/projekte/korodur-asphalt-repair-mix/landing-page/archiv/index-short-v1-fruehjahrsaktion.html) | 27.02.2026 |
 
 ## Projektstruktur
 
