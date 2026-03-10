@@ -1,0 +1,72 @@
+/* ============================================================
+   KORODUR Corporate Design – Shared Tokens
+   Version: 1.0 | Stand: Maerz 2026
+   ============================================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;800;900&display=swap');
+
+/* --- Design Tokens --- */
+:root {
+  /* Farben */
+  --primary:    #002d59;   /* Navy – Pantone 295 C */
+  --secondary:  #009ee3;   /* Cyan – Akzentfarbe */
+  --light-gray: #ececed;
+  --mid-gray:   #d9dada;
+  --white:      #ffffff;
+  --text:       #002d59;
+  --cta:        #009ee3;
+
+  /* Schrift */
+  --font: "Gabarito", Arial, sans-serif;
+
+  /* Layout — overridden per variant */
+  --max-w:          1200px;
+  --section-pad-d:  80px;
+  --section-pad-m:  48px;
+}
+
+/* --- CSS Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--white);
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--secondary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Basis Utilities --- */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+section { padding: var(--section-pad-d) 0; }
+
+.bg-white { background: var(--white); }
+.bg-gray  { background: var(--light-gray); }
+.bg-dark  { background: var(--primary); color: var(--white); }
+.bg-dark h2,
+.bg-dark .section-intro { color: var(--white); }
+
+h1, h2, h3, h4 { font-family: var(--font); color: var(--text); }
+p { margin-bottom: 16px; }
+
+.subline { font-weight: 800; text-transform: uppercase; letter-spacing: .02em; }
+.section-intro { font-size: 1.1rem; max-width: 960px; margin-bottom: 24px; }
+.micro-copy { font-size: .85rem; color: #5a6a7a; margin-top: 8px; }
+
+/* --- Buttons (base only, visual style per variant) --- */
+.btn {
+  display: inline-block;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 32px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all .25s ease;
+  text-align: center;
+}
+.btn:hover { text-decoration: none; }

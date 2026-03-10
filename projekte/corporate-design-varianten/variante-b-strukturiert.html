@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rapid Set ASPHALT REPAIR MIX – die schnelle, einfache und dauerhafte Asphalt-Reparatur. KORODUR Corporate Technical.">
+<title>Variante B: Corporate Technical | Rapid Set ASPHALT REPAIR MIX</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* ===== VARIANTE B: CORPORATE TECHNICAL ===== */
+/* Benchmark: Knauf, TRUMPF, Hilti — Structure, Data, Efficiency */
+
+:root {
+  --max-w: 1200px;
+  --border: 1px solid var(--mid-gray);
+  --section-pad-d: 96px;
+  --section-pad-m: 56px;
+  --card-radius: 4px;
+  --card-shadow: 0 1px 3px rgba(0,45,89,0.08);
+  --card-shadow-hover: 0 4px 12px rgba(0,45,89,0.12);
+}
+
+/* ===== GLOBAL TYPOGRAPHY ===== */
+h1 {
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+h2 {
+  font-weight: 800;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+h2::after { display: none; }
+h3 {
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  margin-bottom: 8px;
+}
+body {
+  line-height: 1.65;
+}
+
+/* Section label above H2 */
+.section-number {
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Section intro */
+.section-intro {
+  text-align: left;
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Specs / data styling — Gabarito 800, NO monospace */
+.spec-value {
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+/* ===== SECTION RHYTHM: White → Gray → White → Gray → White → Navy ===== */
+section {
+  padding: var(--section-pad-d) 0;
+  border-bottom: none;
+}
+section.bg-white { background: var(--white); }
+section.bg-gray { background: var(--light-gray); }
+section.bg-dark { background: var(--primary) !important; }
+
+/* Remove image desaturation */
+img { filter: none; }
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--secondary);
+  z-index: 1000;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--white);
+  border-bottom: var(--border);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 800;
+}
+header .container { display: flex; align-items: center; justify-content: space-between; }
+header nav { display: flex; align-items: center; }
+header nav a {
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: 32px;
+  transition: color 0.2s;
+}
+header nav a:hover { color: var(--secondary); text-decoration: none; }
+.logo { display: flex; align-items: center; }
+.logo img { height: 56px; width: auto; }
+.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--text); padding: 4px; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  border-radius: var(--card-radius);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  transition: all 0.25s ease;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+.btn-primary:hover {
+  background: #001a35;
+  border-color: #001a35;
+  color: var(--white);
+  text-decoration: none;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  text-decoration: none;
+  padding: 14px 32px;
+}
+.btn-ghost:hover {
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ===== HERO: Split Layout ===== */
+#hero {
+  padding: 80px 0 96px;
+  background: var(--light-gray) !important;
+  border-top: none;
+}
+.hero-split {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 48px;
+  align-items: center;
+}
+.hero-text h1 { margin-bottom: 16px; }
+.hero-sub {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  line-height: 1.65;
+  max-width: 560px;
+  color: var(--text);
+}
+.hero-img {
+  display: block;
+}
+.hero-img img {
+  width: 100%;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+/* Bento Key Facts */
+.key-figures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.key-figure {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  padding: 20px 20px;
+  box-shadow: var(--card-shadow);
+  border: var(--border);
+  text-align: left;
+}
+.key-figure .number {
+  font-family: var(--font);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+  line-height: 1.2;
+}
+.key-figure .label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5a6a7a;
+  margin-top: 4px;
+  display: block;
+}
+
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ===== MINI TRUST BAR ===== */
+.mini-trust {
+  background: var(--white);
+  color: var(--text);
+  padding: 20px 0;
+  border-bottom: var(--border);
+}
+.mini-trust .container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px 48px;
+}
+.mini-trust-item {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+/* ===== CARDS (Global) ===== */
+.problem-card,
+.ref-card,
+a.video-card,
+.berater-card {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.problem-card:hover,
+.ref-card:hover,
+a.video-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ===== PROBLEM SECTION ===== */
+.problem-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+.problem-card {
+  padding: 32px 28px;
+  position: relative;
+}
+.problem-card .card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  display: block;
+  color: var(--primary);
+  opacity: 1;
+}
+.problem-card h3 { margin-bottom: 10px; }
+.problem-card p { font-size: 0.95rem; margin-bottom: 0; line-height: 1.65; }
+
+.section-bridge {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 24px 28px;
+  background: var(--light-gray);
+  color: var(--text);
+  border-radius: var(--card-radius);
+  border: var(--border);
+  font-style: normal;
+  line-height: 1.65;
+}
+
+/* ===== STEPS / TIMELINE ===== */
+.timeline {
+  position: relative;
+  margin: 48px 0;
+  padding-left: 80px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--mid-gray);
+}
+.timeline-step {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: var(--border);
+}
+.timeline-step:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+.timeline-number {
+  position: absolute;
+  left: -80px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.timeline-step h3 { margin-bottom: 6px; }
+.timeline-step p { font-size: 0.95rem; margin-bottom: 0; color: #4a5a6a; line-height: 1.65; }
+
+/* Benefits Bar — Bento Grid */
+.benefits-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 48px 0 0;
+}
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: var(--font);
+  padding: 16px 20px;
+  background: var(--white);
+  border-radius: var(--card-radius);
+  border: var(--border);
+  box-shadow: var(--card-shadow);
+}
+.benefit-item .b-icon { color: var(--secondary); font-size: 1rem; font-weight: 900; }
+
+/* ===== VIDEO ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+a.video-card {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+}
+a.video-card:hover { text-decoration: none; }
+.video-thumb { position: relative; overflow: hidden; }
+.video-thumb img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background: rgba(0,45,89,.85);
+  color: var(--white);
+  border-radius: var(--card-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 3px;
+  transition: background 0.2s;
+}
+a.video-card:hover .play-btn { background: var(--primary); }
+.video-card-body { padding: 20px 24px; }
+.video-card-body h3 { margin-bottom: 6px; }
+.video-card-body p { font-size: 0.9rem; margin-bottom: 0; color: #5a6a7a; }
+.video-lang-badge {
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--light-gray);
+  color: var(--primary);
+  padding: 3px 10px;
+  border-radius: var(--card-radius);
+  margin-bottom: 8px;
+}
+
+/* ===== COMPARISON — Real HTML Table with Zebra ===== */
+.comparison-summary {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  padding: 20px 24px;
+  background: var(--white);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  font-style: normal;
+  line-height: 1.65;
+}
+.comparison-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.comp-col {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  border: var(--border);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.comp-col-header {
+  padding: 16px 20px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-align: left;
+  border-bottom: var(--border);
+}
+.comp-col:nth-child(1) .comp-col-header {
+  background: var(--primary);
+  color: var(--white);
+  border-bottom: 2px solid var(--primary);
+}
+.comp-col:nth-child(2) .comp-col-header { background: var(--light-gray); color: var(--text); }
+.comp-col:nth-child(3) .comp-col-header { background: var(--light-gray); color: var(--text); }
+.comp-col-body { padding: 0; }
+.comp-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: var(--border);
+  font-size: 0.88rem;
+}
+.comp-row:last-child { border-bottom: none; }
+.comp-row:nth-child(even) { background: var(--light-gray); }
+.comp-row .label { font-weight: 500; color: #5a6a7a; font-size: 0.82rem; }
+.comp-row .value { font-family: var(--font); font-weight: 700; font-size: 0.88rem; text-align: right; color: var(--text); }
+.comp-col:nth-child(1) .comp-row .value { color: var(--primary); font-weight: 800; }
+
+/* ===== REFERENCES ===== */
+.ref-filters {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  background: var(--light-gray);
+  border-radius: var(--card-radius);
+  padding: 4px;
+}
+.ref-filter-btn {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: var(--card-radius);
+  background: transparent;
+  cursor: pointer;
+  color: #5a6a7a;
+  transition: all 0.2s;
+}
+.ref-filter-btn.active,
+.ref-filter-btn:hover {
+  color: var(--primary);
+  background: var(--white);
+  box-shadow: var(--card-shadow);
+}
+.ref-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.ref-card {
+  overflow: hidden;
+}
+.ref-card:hover { text-decoration: none; }
+.ref-card-img { width: 100%; height: 200px; object-fit: cover; }
+.ref-card-body { padding: 24px; }
+.ref-card-badge {
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--light-gray);
+  color: var(--text);
+  padding: 3px 10px;
+  border-radius: var(--card-radius);
+  margin-bottom: 8px;
+  margin-right: 4px;
+}
+.ref-card-highlight {
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(0,158,227,0.08);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  padding: 3px 10px;
+  border-radius: var(--card-radius);
+  margin-bottom: 8px;
+  margin-left: 0;
+}
+.ref-card-meta { font-size: 0.82rem; color: #5a6a7a; margin-bottom: 8px; font-family: var(--font); font-weight: 500; }
+.ref-card-body h3 { margin-bottom: 6px; }
+.ref-card-body p { font-size: 0.9rem; margin-bottom: 0; line-height: 1.65; }
+
+blockquote.testimonial {
+  border-left: 3px solid var(--secondary);
+  padding: 24px 28px;
+  margin: 0 0 40px;
+  background: var(--light-gray);
+  border-radius: var(--card-radius);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.65;
+}
+blockquote.testimonial cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  font-family: var(--font);
+  color: var(--primary);
+}
+
+/* ===== ZIELGRUPPEN: Tabs ===== */
+.tabs-nav {
+  display: flex;
+  gap: 4px;
+  background: var(--white);
+  border-radius: var(--card-radius);
+  padding: 4px;
+  margin-bottom: 0;
+  border: var(--border);
+}
+.tab-btn {
+  flex: 1;
+  padding: 14px 8px;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #5a6a7a;
+  border-radius: var(--card-radius);
+  transition: all 0.2s;
+}
+.tab-btn.active {
+  background: var(--primary);
+  color: var(--white);
+}
+.tab-panel {
+  display: none;
+  padding: 32px 28px;
+  background: var(--white);
+  border-radius: 0 0 var(--card-radius) var(--card-radius);
+  border: var(--border);
+  border-top: none;
+}
+.tab-panel.active { display: block; }
+.tab-panel h3 { color: var(--primary); margin-bottom: 12px; }
+.tab-panel ul { margin: 12px 0 16px 20px; }
+.tab-panel li { margin-bottom: 8px; font-size: 0.95rem; line-height: 1.65; }
+
+/* ===== TECH DATA ===== */
+.technik-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin: 40px 0;
+}
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: var(--border);
+  box-shadow: var(--card-shadow);
+}
+.tech-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-bottom: none;
+}
+.tech-table td {
+  padding: 12px 20px;
+  border-bottom: var(--border);
+  font-size: 0.9rem;
+}
+.tech-table td:first-child { font-weight: 600; text-align: left; }
+.tech-table td:last-child { font-family: var(--font); font-weight: 800; font-size: 0.9rem; text-align: right; color: var(--primary); }
+.tech-table tr:last-child td { border-bottom: none; }
+.tech-table tr:nth-child(even) td { background: var(--light-gray); }
+.tech-table tr:nth-child(odd) td { background: var(--white); }
+
+/* Merkmale — Bento Grid */
+.merkmale-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 40px 0;
+}
+.merkmal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 16px 20px;
+  background: var(--white);
+  border-radius: var(--card-radius);
+  border: var(--border);
+  box-shadow: var(--card-shadow);
+}
+.merkmal-item .m-icon {
+  color: var(--secondary);
+  font-weight: 900;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.sustainability-box {
+  background: var(--light-gray);
+  padding: 20px 24px;
+  border-radius: var(--card-radius);
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.65;
+  border: var(--border);
+}
+
+.technik-image-col { position: sticky; top: 100px; }
+
+/* ===== INLINE CONTACT FORM ===== */
+.contact-form-section {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: var(--border);
+}
+.contact-form { max-width: 600px; margin: 0; }
+.form-row { margin-bottom: 20px; }
+.form-row label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  border: var(--border);
+  border-radius: var(--card-radius);
+  background: var(--white);
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0,45,89,0.08);
+}
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ===== FAQ ===== */
+.faq-item {
+  border: none;
+  border-bottom: var(--border);
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  padding: 20px 0;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+  gap: 12px;
+  transition: color 0.2s;
+}
+.faq-question:hover { color: var(--secondary); }
+.faq-question.active { color: var(--primary); }
+.faq-question::after {
+  content: "+";
+  font-family: var(--font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: var(--secondary);
+}
+.faq-question.active::after { content: "\2212"; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.faq-answer-inner { padding: 0 0 20px; line-height: 1.65; font-size: 0.95rem; color: #4a5a6a; }
+
+/* ===== BERATER ===== */
+#berater {
+  border-bottom: none;
+}
+#berater .section-number { color: rgba(255,255,255,.4); }
+#berater h2 { color: var(--white); }
+.berater-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0 24px; }
+.berater-grid-row2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 66.666%; margin: 0 auto 24px; }
+.berater-card {
+  border-radius: var(--card-radius);
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--text);
+  box-shadow: none;
+  border: none;
+}
+.berater-card:hover { transform: translateY(-2px); box-shadow: var(--card-shadow-hover); }
+.berater-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--light-gray);
+  margin: 0 auto 12px;
+  display: block;
+  background: var(--light-gray);
+}
+.berater-name { font-weight: 800; font-size: 1rem; margin-bottom: 2px; }
+.berater-title { font-size: 0.8rem; color: #5a6a7a; margin-bottom: 10px; }
+.berater-plz {
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--light-gray);
+  color: var(--text);
+  padding: 3px 12px;
+  border-radius: var(--card-radius);
+  margin-bottom: 12px;
+}
+.berater-contact { font-size: 0.9rem; margin-bottom: 10px; }
+.berater-contact a { color: var(--primary); font-weight: 700; }
+.berater-btn {
+  display: inline-block;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 24px;
+  border-radius: var(--card-radius);
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.berater-btn:hover { background: #001a35; border-color: #001a35; color: var(--white); text-decoration: none; }
+.berater-links { text-align: center; margin-top: 24px; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.berater-links a {
+  color: rgba(255,255,255,.5);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.berater-links a:hover { color: var(--white); text-decoration: none; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+footer a { color: rgba(255,255,255,.5); }
+footer a:hover { color: var(--white); text-decoration: none; }
+.footer-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.footer-brand { display: none; }
+.footer-left p {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.5;
+  font-family: var(--font);
+  color: rgba(255,255,255,.4);
+}
+.footer-right {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section { padding: var(--section-pad-m) 0; }
+  .hero-split { display: block; }
+  .hero-img { display: block; margin-bottom: 32px; }
+  .hero-img img { border-radius: var(--card-radius); }
+  .key-figures { grid-template-columns: 1fr; }
+  .problem-cards { grid-template-columns: 1fr; }
+  .video-grid { grid-template-columns: 1fr; }
+  .comparison-table { font-size: 0.8rem; }
+  .comparison-table th, .comparison-table td { padding: 8px 12px; }
+  .ref-grid { grid-template-columns: 1fr; }
+  .ref-filters { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+  .technik-layout { grid-template-columns: 1fr; }
+  .merkmale-list { grid-template-columns: 1fr; }
+  .benefits-bar { grid-template-columns: 1fr; }
+  .berater-grid, .berater-grid-row2 { grid-template-columns: 1fr; max-width: 100%; }
+  .berater-card { display: flex; align-items: center; text-align: left; gap: 16px; padding: 16px; }
+  .berater-img { width: 64px; height: 64px; margin: 0; flex-shrink: 0; }
+  .berater-card-info { flex: 1; }
+  .footer-compact { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .tabs-nav { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+  .tab-btn { flex: none; white-space: nowrap; }
+  .form-grid { grid-template-columns: 1fr; }
+  .hero-ctas .btn { width: 100%; }
+  header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 12px 24px; border-bottom: var(--border); flex-direction: column; z-index: 900; }
+  header nav.open { display: flex; }
+  header nav a { margin: 8px 0; margin-left: 0; }
+  .mobile-menu-btn { display: block; }
+  #hero { padding: 48px 0 56px; }
+}
+
+/* ===== SKIP LINK ===== */
+.skip-link { position: absolute; top: -100px; left: 16px; background: var(--primary); color: white; padding: 8px 16px; z-index: 9999; font-weight: 700; border-radius: var(--card-radius); }
+.skip-link:focus { top: 8px; }
+
+/* ===== COMPARISON TABLE ===== */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: var(--border);
+  box-shadow: var(--card-shadow);
+}
+.comparison-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-bottom: none;
+}
+.comparison-table th:first-child {
+  background: var(--primary);
+}
+.comparison-table th:nth-child(2),
+.comparison-table th:nth-child(3) {
+  background: var(--light-gray);
+  color: var(--text);
+  font-weight: 800;
+}
+.comparison-table td {
+  padding: 10px 20px;
+  border-bottom: var(--border);
+  font-size: 0.88rem;
+}
+.comparison-table td:first-child {
+  font-weight: 500;
+  color: #5a6a7a;
+  font-size: 0.82rem;
+}
+.comparison-table td:nth-child(2),
+.comparison-table td:nth-child(3),
+.comparison-table td:nth-child(4) {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.comparison-table td:nth-child(2) {
+  color: var(--primary);
+  font-weight: 800;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:nth-child(even) td { background: var(--light-gray); }
+.comparison-table tr:nth-child(odd) td { background: var(--white); }
+
+/* ===== FORM SUCCESS ===== */
+.form-success {
+  padding: 24px 28px;
+  background: var(--light-gray);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--card-radius);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.65;
+}
+</style>
+</head>
+<body>
+<a href="#hero" class="skip-link">Zum Inhalt springen</a>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progress-bar"></div>
+
+<!-- HEADER -->
+<header>
+<div class="container">
+<a href="https://www.korodur.de/" class="logo"><img src="assets/korodur-logo.png" alt="KORODUR International GmbH" height="64"></a>
+<button class="mobile-menu-btn" aria-label="Men&uuml; &ouml;ffnen">&#9776;</button>
+<nav>
+<a href="#loesung">Produkt</a>
+<a href="#referenzen">Referenzen</a>
+<a href="#technik">Technik</a>
+<a href="#berater">Berater</a>
+</nav>
+</div>
+</header>
+
+<main>
+<!-- HERO: Split Layout -->
+<section id="hero" class="bg-gray">
+<div class="container">
+<div class="hero-split">
+<div class="hero-text">
+<h1>Einmal reparieren. Dauerhaft halten.</h1>
+<p class="hero-sub">Rapid Set ASPHALT REPAIR MIX &ndash; die schnelle, einfache und dauerhafte Alternative zu Kaltmischgut. Erh&auml;ltlich &uuml;ber den Baustoffhandel.</p>
+<div class="key-figures">
+<div class="key-figure"><span class="number">30 Min.</span><span class="label">Befahrbar</span></div>
+<div class="key-figure"><span class="number">&ndash;40 &deg;C bis +80 &deg;C</span><span class="label">Temperaturbereich</span></div>
+<div class="key-figure"><span class="number">Nur Wasser</span><span class="label">Anmischen</span></div>
+</div>
+<div class="hero-ctas">
+<a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" class="btn btn-primary" target="_blank" rel="noopener">Datenblatt herunterladen</a>
+<a href="#loesung" class="btn btn-ghost">Produkt entdecken</a>
+</div>
+</div>
+<div class="hero-img">
+<img src="assets/arm-ergebnis-weitwinkel.jpg" alt="Asphalt Repair Mix Ergebnis">
+</div>
+</div>
+</div>
+</section>
+
+<!-- MINI TRUST BAR -->
+<div class="mini-trust">
+<div class="container">
+<span class="mini-trust-item">&#10003; <strong>100+ Referenzprojekte</strong> in 15 L&auml;ndern</span>
+<span class="mini-trust-item">&#10003; <strong>Seit 2021</strong> im Praxiseinsatz</span>
+<span class="mini-trust-item">&#10003; <strong>Bew&auml;hrt</strong> unter Schwerlastverkehr</span>
+<span class="mini-trust-item">&#10003; <strong>KORODUR</strong> &ndash; seit 1936</span>
+</div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem" class="bg-white">
+<div class="container">
+<span class="section-number">01 / Problem</span>
+<h2>Warum Kaltmischgut nicht reicht</h2>
+<p class="section-intro">Frostsch&auml;den, Schlagl&ouml;cher, absackende Schachtabdeckungen &ndash; das Schadensbild kennt jeder. Die &uuml;bliche L&ouml;sung: Kaltmischgut rein und hoffen. Doch es gibt eine dritte Option.</p>
+<div class="problem-cards">
+<div class="problem-card">
+<span class="card-icon">&#9888;</span>
+<h3>Schnell drin &ndash; schnell wieder drau&szlig;en</h3>
+<p>Kaltasphalt ist die beliebteste Notl&ouml;sung. Nach wenigen Wochen rei&szlig;t die Stelle wieder auf. Mehrfach im Jahr dieselbe Reparatur &ndash; das ist Geldverbrennung.</p>
+</div>
+<div class="problem-card">
+<span class="card-icon">&#9201;</span>
+<h3>H&auml;lt, aber wann?</h3>
+<p>Hei&szlig;asphalt ist dauerhaft &ndash; wenn man ihn bekommt. Fr&auml;se, Einbaubohle, Walze, Mindestmenge. F&uuml;r einzelne Schlagl&ouml;cher v&ouml;llig unwirtschaftlich.</p>
+</div>
+<div class="problem-card">
+<span class="card-icon">&#10004;</span>
+<h3>Schnell, einfach &ndash; und es h&auml;lt</h3>
+<p>Sack auf, Wasser dazu, mischen, einbauen. Nach 30 Minuten belastbar. H&auml;lt unter LKW-Verkehr &ndash; nachgewiesen in &uuml;ber 100 Referenzprojekten.</p>
+</div>
+</div>
+<div class="section-bridge">Rapid Set Asphalt Repair Mix ist kein Asphalt. Es ist ein mineralischer Reparaturm&ouml;rtel, der aussieht wie Asphalt &ndash; sich aber einfacher verarbeiten l&auml;sst und dauerhaft h&auml;lt.</div>
+<div style="margin-top: 32px;">
+<a href="#vergleich" class="btn btn-ghost">Vergleichstabelle ansehen</a>
+</div>
+</div>
+</section>
+
+<!-- LOESUNG -->
+<section id="loesung" class="bg-gray">
+<div class="container">
+<span class="section-number">02 / L&ouml;sung</span>
+<h2>Sack auf. Wasser dazu. Fertig.</h2>
+<p class="section-intro">Rapid Set ASPHALT REPAIR MIX verbindet die Geschwindigkeit von Kaltmischgut mit der Dauerhaftigkeit von Hei&szlig;asphalt &ndash; ohne die Nachteile beider Optionen.</p>
+<div class="timeline">
+<div class="timeline-step">
+<div class="timeline-number">1</div>
+<h3>Vorbereiten</h3>
+<p>Losen Belag entfernen, Kanten sauber anschneiden, Schadstelle vorn&auml;ssen. Keine Haftbr&uuml;cke, kein Primer n&ouml;tig.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-number">2</div>
+<h3>Anmischen</h3>
+<p>25-kg-Sack &ouml;ffnen, ca. 3,8 Liter Wasser zugeben, mit R&uuml;hrquirl mischen bis die Masse homogen ist.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-number">3</div>
+<h3>Einbauen</h3>
+<p>Material in die Schadstelle einf&uuml;llen, abziehen und leicht verdichten. Auch pumpf&auml;hig f&uuml;r gr&ouml;&szlig;ere Fl&auml;chen.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-number">4</div>
+<h3>Belastbar</h3>
+<p>Verkehrsfreigabe nach ca. 30 Minuten. Nach ca. 1 Stunde voll belastbar &ndash; auch f&uuml;r Schwerlast.</p>
+</div>
+</div>
+<div class="benefits-bar">
+<span class="benefit-item"><span class="b-icon">&#10003;</span> Belastbar in 30 Min.</span>
+<span class="benefit-item"><span class="b-icon">&#10003;</span> 30&ndash;600 mm Einbaust&auml;rke</span>
+<span class="benefit-item"><span class="b-icon">&#10003;</span> Keine Haftbr&uuml;cke</span>
+<span class="benefit-item"><span class="b-icon">&#10003;</span> Keine Spezialger&auml;te</span>
+<span class="benefit-item"><span class="b-icon">&#10003;</span> Frostbest&auml;ndig</span>
+<span class="benefit-item"><span class="b-icon">&#10003;</span> 30 % weniger CO&#8322;</span>
+</div>
+</div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="bg-white">
+<div class="container">
+<span class="section-number">03 / Praxis</span>
+<h2>So sieht das in der Praxis aus</h2>
+<div class="video-grid">
+<a href="https://www.youtube.com/watch?v=Z676CtyjVr8" target="_blank" rel="noopener" class="video-card">
+<div class="video-thumb">
+<img src="https://img.youtube.com/vi/Z676CtyjVr8/maxresdefault.jpg" alt="Video: Tiefe Schadstelle manuell repariert" loading="lazy">
+<span class="play-btn">&#9654;</span>
+</div>
+<div class="video-card-body">
+<span class="video-lang-badge">Deutsch</span>
+<h3>Tiefe Schadstelle &ndash; manuell repariert</h3>
+<p>Schritt f&uuml;r Schritt: Manuelle Verarbeitung einer tiefen Schadstelle.</p>
+</div>
+</a>
+<a href="https://www.youtube.com/watch?v=7Jtcg5U13rY&t=80s" target="_blank" rel="noopener" class="video-card">
+<div class="video-thumb">
+<img src="https://img.youtube.com/vi/7Jtcg5U13rY/maxresdefault.jpg" alt="Video: Application Guide" loading="lazy">
+<span class="play-btn">&#9654;</span>
+</div>
+<div class="video-card-body">
+<span class="video-lang-badge">English</span>
+<h3>Ausf&uuml;hrliche Verarbeitungsanleitung</h3>
+<p>Detaillierte Anleitung von der Vorbereitung bis zum Ergebnis.</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- VERGLEICH -->
+<section id="vergleich" class="bg-gray">
+<div class="container">
+<span class="section-number">04 / Vergleich</span>
+<h2>ARM vs. Kaltmischgut vs. Hei&szlig;asphalt</h2>
+<div class="comparison-summary">Asphalt Repair Mix ist nicht die g&uuml;nstigste L&ouml;sung. Es ist die wirtschaftlichste &ndash; weil Sie nur einmal reparieren.</div>
+<table class="comparison-table">
+<thead>
+<tr><th></th><th>Asphalt Repair Mix</th><th>Kaltmischgut</th><th>Hei&szlig;asphalt</th></tr>
+</thead>
+<tbody>
+<tr><td>Belastbar nach</td><td>30 Min.</td><td>Sofort (instabil)</td><td>30&ndash;60 Min.</td></tr>
+<tr><td>Voll belastbar</td><td>ca. 1 Std.</td><td>Sofort (eingeschr.)</td><td>1&ndash;2 Std.</td></tr>
+<tr><td>Haltbarkeit</td><td>Dauerhaft</td><td>Wochen&ndash;Monate</td><td>Dauerhaft</td></tr>
+<tr><td>Spezialger&auml;te</td><td>Nein</td><td>Nein</td><td>Ja (Fr&auml;se, Walze)</td></tr>
+<tr><td>Haftbr&uuml;cke</td><td>Nein</td><td>Teilweise</td><td>Nein</td></tr>
+<tr><td>Lieferform</td><td>Sackweise</td><td>Sackweise</td><td>Tonnenweise</td></tr>
+<tr><td>Einbaust&auml;rke</td><td>30&ndash;600 mm</td><td>20&ndash;50 mm</td><td>30&ndash;100+ mm</td></tr>
+<tr><td>Frostbest&auml;ndig</td><td>Ja</td><td>Eingeschr&auml;nkt</td><td>Ja</td></tr>
+<tr><td>CO&#8322;</td><td>30 % weniger</td><td>k. A.</td><td>Hoch</td></tr>
+<tr><td>Gesamtkosten</td><td>Mittel</td><td>Hoch (Wiederholung)</td><td>Hoch (Einmal)</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- REFERENZEN -->
+<section id="referenzen" class="bg-white">
+<div class="container">
+<span class="section-number">05 / Referenzen</span>
+<h2>Bew&auml;hrt in der Praxis</h2>
+<blockquote class="testimonial">
+&bdquo;Ein Material, das h&auml;lt, was es verspricht &ndash; und das die Arbeit vor Ort so einfach wie m&ouml;glich macht.&ldquo;
+<cite>&ndash; F &amp; G Bau GmbH, Versmold</cite>
+</blockquote>
+<div class="ref-filters">
+<button class="ref-filter-btn active" data-filter="alle">Alle</button>
+<button class="ref-filter-btn" data-filter="strassenbau">Stra&szlig;enbau</button>
+<button class="ref-filter-btn" data-filter="gewerbe">Gewerbe</button>
+<button class="ref-filter-btn" data-filter="handel">Handel</button>
+</div>
+<div class="ref-grid">
+<div class="ref-card" data-category="strassenbau">
+<img src="assets/arm-ergebnis-weitwinkel.jpg" alt="Lagerfl&auml;che Dieckmann" class="ref-card-img" loading="lazy">
+<div class="ref-card-body">
+<span class="ref-card-badge">Stra&szlig;enbau</span>
+<span class="ref-card-badge">2021</span>
+<span class="ref-card-highlight">Pionierprojekt</span>
+<h3>Lagerfl&auml;che Dieckmann, Versmold</h3>
+<p class="ref-card-meta">Versmold &middot; Dieckmann + KORODUR-Anwendungstechniker</p>
+<p>Erste Referenz: Lagerfl&auml;che unter h&ouml;chster LKW- und Baggerbelastung. Hervorragende Best&auml;ndigkeit unter Schwerlastverkehr.</p>
+</div>
+</div>
+<div class="ref-card" data-category="handel">
+<img src="assets/arm-frisch-fertig-glatt.jpg" alt="Linnenbecker Bad Oeynhausen" class="ref-card-img" loading="lazy">
+<div class="ref-card-body">
+<span class="ref-card-badge">Baufachhandel</span>
+<span class="ref-card-badge">2022</span>
+<h3>Linnenbecker, Bad Oeynhausen</h3>
+<p class="ref-card-meta">Bad Oeynhausen &middot; Au&szlig;enlager</p>
+<p>Testfl&auml;che unter st&auml;ndigem LKW- und Staplerverkehr. Hervorragende Best&auml;ndigkeit auch unter h&ouml;chster Beanspruchung.</p>
+</div>
+</div>
+<div class="ref-card" data-category="strassenbau">
+<img src="assets/arm-verarbeitung-werkzeug.jpg" alt="W&uuml;seke Baustoffwerke" class="ref-card-img" loading="lazy">
+<div class="ref-card-body">
+<span class="ref-card-badge">Baustoffwerk</span>
+<span class="ref-card-badge">2022</span>
+<span class="ref-card-highlight">Nachkontrolle: intakt</span>
+<h3>W&uuml;seke Baustoffwerke, Sassenberg</h3>
+<p class="ref-card-meta">Sassenberg &middot; Knappheide GmbH</p>
+<p>LKW-Ausfahrt mit 2 Paletten saniert. Volle Tragf&auml;higkeit unter t&auml;glichem Schwerlastverkehr.</p>
+</div>
+</div>
+<div class="ref-card" data-category="gewerbe">
+<img src="assets/arm-nachkontrolle-18monate.jpg" alt="Lackiererei Schmidt" class="ref-card-img" loading="lazy">
+<div class="ref-card-body">
+<span class="ref-card-badge">Gewerbe</span>
+<span class="ref-card-badge">2022</span>
+<h3>Lackiererei Schmidt, Versmold</h3>
+<p class="ref-card-meta">Versmold &middot; GaLa-Bau Grothues &amp; Solfrian</p>
+<p>Betriebszufahrt unter LKW- und PKW-Verkehr. &Uuml;berzeugende Tragf&auml;higkeit und einfachste Verarbeitung.</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 40px; text-align: center;">
+<a href="#berater" class="btn btn-ghost">&Auml;hnliches Projekt? Sprechen Sie uns an.</a>
+</div>
+</div>
+</section>
+
+<!-- ZIELGRUPPEN -->
+<section id="zielgruppen" class="bg-gray">
+<div class="container">
+<span class="section-number">06 / Zielgruppen</span>
+<h2>F&uuml;r jede Fl&auml;che. F&uuml;r jeden Einsatz.</h2>
+<p class="section-intro">Ob Stra&szlig;e, Gehweg, Parkplatz oder Industriegel&auml;nde &ndash; Asphalt Repair Mix repariert Asphaltfl&auml;chen dauerhaft.</p>
+<div class="tabs-nav">
+<button class="tab-btn active" data-tab="kommunen">Kommunen</button>
+<button class="tab-btn" data-tab="galabau">GaLa-Bau</button>
+<button class="tab-btn" data-tab="facility">Facility Mgmt.</button>
+<button class="tab-btn" data-tab="verarbeiter">Verarbeiter</button>
+</div>
+<div class="tab-panel active" id="tab-kommunen">
+<h3>Weniger Beschwerden. Weniger Doppelarbeit.</h3>
+<ul>
+<li>Dauerhafte Reparatur von Schlagl&ouml;chern, Frostsch&auml;den und Absackungen</li>
+<li>Budget sinnvoll einsetzen &ndash; jede Stelle nur einmal reparieren</li>
+<li>Keine Fr&auml;se, keine Walze &ndash; ein Bautrupp reicht</li>
+<li>Verarbeitbar ab 5 &deg;C &ndash; ideal f&uuml;r die Frostsch&auml;den-Saison</li>
+</ul>
+</div>
+<div class="tab-panel" id="tab-galabau">
+<h3>Zufriedene Kunden. Keine Reklamationen.</h3>
+<ul>
+<li>Ergebnisse, auf die Sie Ihren Namen setzen k&ouml;nnen</li>
+<li>Schnelle Wiederfreigabe &ndash; Baustelle in Stunden r&auml;umen</li>
+<li>Einfachste Verarbeitung ohne Spezialger&auml;te oder Haftbr&uuml;cke</li>
+<li>Wettbewerbsvorteil gegen&uuml;ber Kaltmischgut</li>
+</ul>
+</div>
+<div class="tab-panel" id="tab-facility">
+<h3>Sichere Fl&auml;chen. Minimale Betriebsunterbrechung.</h3>
+<ul>
+<li>Schlagl&ouml;cher beseitigen &ndash; bevor sie zum Haftungsfall werden</li>
+<li>Sanierung bei laufendem Betrieb</li>
+<li>Professionelles Erscheinungsbild f&uuml;r Ihr Gel&auml;nde</li>
+<li>Flexible Einbaust&auml;rke 30&ndash;600 mm</li>
+</ul>
+</div>
+<div class="tab-panel" id="tab-verarbeiter">
+<h3>Einfach verarbeiten. Sicher liefern.</h3>
+<ul>
+<li>Sack auf, 3,8 l Wasser, mischen, einbauen &ndash; fertig</li>
+<li>Kein Primer, keine Haftbr&uuml;cke, keine Fr&auml;se</li>
+<li>30&ndash;600 mm Einbaust&auml;rke</li>
+<li>Pumpf&auml;hig f&uuml;r gr&ouml;&szlig;ere Fl&auml;chen</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- TECHNISCHE DATEN -->
+<section id="technik" class="bg-white">
+<div class="container">
+<span class="section-number">07 / Technische Daten</span>
+<h2>Die Fakten auf einen Blick</h2>
+<div class="technik-layout">
+<div>
+<table class="tech-table">
+<thead><tr><th>Kennwert</th><th style="text-align:right;">Wert</th></tr></thead>
+<tbody>
+<tr><td>Druckfestigkeit</td><td>ca. 38 N/mm&sup2;</td></tr>
+<tr><td>Biegezugfestigkeit</td><td>ca. 6,4 N/mm&sup2;</td></tr>
+<tr><td>E-Modul</td><td>ca. 22.000 N/mm&sup2;</td></tr>
+<tr><td>K&ouml;rnung</td><td>0&ndash;8 mm</td></tr>
+<tr><td>Farbe</td><td>Schwarz</td></tr>
+<tr><td>Einbaust&auml;rke</td><td>30&ndash;600 mm</td></tr>
+<tr><td>Lieferform</td><td>25-kg-Sack</td></tr>
+<tr><td>Wasserzugabe</td><td>ca. 3,80 l / 25 kg</td></tr>
+<tr><td>Materialverbrauch</td><td>ca. 20 kg/m&sup2;/cm</td></tr>
+<tr><td>Verarbeitungstemperatur</td><td>5&ndash;30 &deg;C</td></tr>
+<tr><td>Belastbar nach</td><td>ca. 30 Min.</td></tr>
+<tr><td>Voll belastbar</td><td>ca. 1 Std.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="technik-image-col">
+<div style="border-radius:4px;overflow:hidden;border:1px solid var(--mid-gray);box-shadow:0 1px 3px rgba(0,45,89,0.08);">
+<img src="assets/Asphalt Repair Mix_30 Minuten.png" alt="Rapid Set ASPHALT REPAIR MIX 25 kg Sack" style="width:100%;padding:16px;background:var(--white);" loading="lazy">
+<p style="font-size:.82rem;color:#5a6a7a;padding:12px 16px;background:var(--light-gray);margin:0;text-align:left;border-top:1px solid var(--mid-gray);font-weight:600;">25 kg Sack &ndash; belastbar nach 30 Min.</p>
+</div>
+</div>
+</div>
+<div class="merkmale-list">
+<span class="merkmal-item"><span class="m-icon">&#10003;</span> Hochfest, spannungsarm</span>
+<span class="merkmal-item"><span class="m-icon">&#10003;</span> Mineralisch, chloridfrei</span>
+<span class="merkmal-item"><span class="m-icon">&#10003;</span> Frost- &amp; tausalzbest&auml;ndig</span>
+<span class="merkmal-item"><span class="m-icon">&#10003;</span> Exzellente Haftung</span>
+<span class="merkmal-item"><span class="m-icon">&#10003;</span> 12 Monate lagerstabil</span>
+<span class="merkmal-item"><span class="m-icon">&#10003;</span> Pumpf&auml;hig</span>
+</div>
+<div class="sustainability-box">
+<strong>Nachhaltigkeit:</strong> ca. 30 % weniger CO&#8322; als herk&ouml;mmlicher Portlandzement. Recyceltes Zuschlagmaterial und reduzierter Einsatz von Prim&auml;rrohstoffen.
+</div>
+
+<!-- Inline Contact Form -->
+<div class="contact-form-section">
+<span class="section-number">08 / Kontakt</span>
+<h2>Beratung anfragen</h2>
+<p class="section-intro">Technische Fragen, Mengenberechnung oder Gro&szlig;projekt? Unsere Fachberater melden sich innerhalb von 24 Stunden.</p>
+<form class="contact-form" id="contact-form">
+<div class="form-grid">
+<div class="form-row"><label for="name">Name *</label><input type="text" id="name" required></div>
+<div class="form-row"><label for="firma">Firma</label><input type="text" id="firma"></div>
+</div>
+<div class="form-grid">
+<div class="form-row"><label for="email">E-Mail *</label><input type="email" id="email" required></div>
+<div class="form-row"><label for="telefon">Telefon</label><input type="tel" id="telefon"></div>
+</div>
+<div class="form-row">
+<label for="betreff">Betreff</label>
+<select id="betreff">
+<option value="">Bitte w&auml;hlen</option>
+<option>Technische Frage</option>
+<option>Mengenberechnung</option>
+<option>Gro&szlig;projekt</option>
+<option>Musteranfrage</option>
+<option>Sonstiges</option>
+</select>
+</div>
+<div class="form-row"><label for="nachricht">Nachricht</label><textarea id="nachricht" rows="4"></textarea></div>
+<div><button type="submit" class="btn btn-primary">Anfrage senden</button></div>
+<p class="micro-copy">Wir melden uns innerhalb von 24 Stunden. Ihre Daten werden vertraulich behandelt.</p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-gray">
+<div class="container">
+<span class="section-number">09 / FAQ</span>
+<h2>H&auml;ufige Fragen</h2>
+<div class="faq-item">
+<button class="faq-question">Was ist Rapid Set ASPHALT REPAIR MIX?</button>
+<div class="faq-answer"><div class="faq-answer-inner">Ein zementbasiertes, polymerverg&uuml;tetes Reparaturmaterial f&uuml;r alle Asphaltfl&auml;chen. Es vereint Geschwindigkeit von Kaltmischgut mit der Dauerhaftigkeit von Hei&szlig;asphalt. Belastbar nach 30 Min., voll belastbar nach ca. 1 Std.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Warum besser als Kaltasphalt?</button>
+<div class="faq-answer"><div class="faq-answer-inner">Kaltasphalt rei&szlig;t nach Wochen wieder auf. ARM erreicht ca. 38 N/mm&sup2; Druckfestigkeit, ist frostbest&auml;ndig und bietet dauerhafte Reparatur &ndash; ohne Nacharbeiten.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Wie schnell belastbar?</button>
+<div class="faq-answer"><div class="faq-answer-inner">Nach ca. 30 Minuten belastbar, nach ca. 1 Stunde voll belastbar &ndash; auch f&uuml;r Schwerlast. Schneller als Hei&szlig;asphalt, zuverl&auml;ssiger als Kaltmischgut.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Wo erh&auml;ltlich?</button>
+<div class="faq-answer"><div class="faq-answer-inner">&Uuml;ber den Baustoffhandel. F&uuml;r technische Fragen oder Gro&szlig;projekte stehen unsere Fachberater zur Verf&uuml;gung.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Kann ich es selbst verarbeiten?</button>
+<div class="faq-answer"><div class="faq-answer-inner">Ja. Sack &ouml;ffnen, 3,8 l Wasser, mischen, einbauen. Keine Haftbr&uuml;cke, keine Spezialwerkzeuge. Auch ohne Fachpersonal professionelle Ergebnisse.</div></div>
+</div>
+</div>
+</section>
+
+<!-- BERATER -->
+<section id="berater" class="bg-dark">
+<div class="container">
+<span class="section-number">10 / Beratung</span>
+<h2 style="text-align:center;">Ihr Fachberater in Ihrer Region</h2>
+<p class="section-intro" style="text-align:center;max-width:640px;margin:0 auto 8px;color:rgba(255,255,255,.85);">Produktfragen, Mengenberechnung, Verarbeitungsempfehlungen &ndash; kostenlos und unverbindlich.</p>
+<div class="berater-grid">
+<div class="berater-card">
+<img src="assets/berater/Jens-Sackmann-2048x2048.jpg" alt="Jens Sackmann" class="berater-img" loading="lazy">
+<div class="berater-card-info">
+<div class="berater-name">Jens Sackmann</div>
+<div class="berater-title">Technische Vertriebsberatung</div>
+<span class="berater-plz">PLZ 20&ndash;29</span>
+<div class="berater-contact"><a href="tel:+491703733983">+49 170 3733983</a></div>
+<a href="tel:+491703733983" class="berater-btn">&#9742; Anrufen</a>
+</div>
+</div>
+<div class="berater-card">
+<img src="assets/berater/Andre-Grahn-2048x2048.jpg" alt="Andr&eacute; Grahn" class="berater-img" loading="lazy">
+<div class="berater-card-info">
+<div class="berater-name">Andr&eacute; Grahn</div>
+<div class="berater-title">Technische Vertriebsberatung</div>
+<span class="berater-plz">PLZ 30&ndash;33, 37, 40&ndash;59</span>
+<div class="berater-contact"><a href="tel:+491703733979">+49 170 3733979</a></div>
+<a href="tel:+491703733979" class="berater-btn">&#9742; Anrufen</a>
+</div>
+</div>
+<div class="berater-card">
+<img src="assets/berater/Jens-Lang-2048x2048.webp" alt="Jens Lang" class="berater-img" loading="lazy">
+<div class="berater-card-info">
+<div class="berater-name">Jens Lang</div>
+<div class="berater-title">Technische Vertriebsberatung</div>
+<span class="berater-plz">PLZ 34&ndash;36, 54&ndash;79, 86&ndash;89</span>
+<div class="berater-contact"><a href="tel:+491703733985">+49 170 3733985</a></div>
+<a href="tel:+491703733985" class="berater-btn">&#9742; Anrufen</a>
+</div>
+</div>
+</div>
+<div class="berater-grid-row2">
+<div class="berater-card">
+<img src="assets/berater/Daniel-May-2048x2048.jpg" alt="Daniel May" class="berater-img" loading="lazy">
+<div class="berater-card-info">
+<div class="berater-name">Daniel May</div>
+<div class="berater-title">Technische Vertriebsberatung</div>
+<span class="berater-plz">PLZ 80&ndash;89, 94</span>
+<div class="berater-contact"><a href="tel:+491721480125">+49 172 1480125</a></div>
+<a href="tel:+491721480125" class="berater-btn">&#9742; Anrufen</a>
+</div>
+</div>
+<div class="berater-card">
+<img src="assets/berater/Francesco-Palese-2048x2048.jpg" alt="Francesco Palese" class="berater-img" loading="lazy">
+<div class="berater-card-info">
+<div class="berater-name">Francesco Palese</div>
+<div class="berater-title">Technische Vertriebsberatung</div>
+<span class="berater-plz">PLZ 90&ndash;97</span>
+<div class="berater-contact"><a href="tel:+491721480128">+49 172 1480128</a></div>
+<a href="tel:+491721480128" class="berater-btn">&#9742; Anrufen</a>
+</div>
+</div>
+</div>
+<div class="berater-links">
+<a href="https://www.korodur.de/kontakt/deutschland/" target="_blank" rel="noopener">Allgemeine Anfrage &rarr;</a>
+<a href="https://www.korodur.de/" target="_blank" rel="noopener">Mehr &uuml;ber KORODUR &rarr;</a>
+</div>
+</div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-compact">
+<div class="footer-left">
+<div class="footer-brand">KORODUR</div>
+<p>KORODUR International GmbH &middot; Wernher-von-Braun-Str. 4 &middot; 92224 Amberg<br>
+<a href="tel:+49962147590">+49 9621 4759-0</a> &middot; <a href="mailto:info@korodur.de">info@korodur.de</a></p>
+</div>
+<div class="footer-right">
+<a href="https://www.korodur.de/impressum/" target="_blank" rel="noopener">Impressum</a>
+<a href="https://www.korodur.de/datenschutz/" target="_blank" rel="noopener">Datenschutz</a>
+<a href="https://www.korodur.de/wp-content/uploads/Asphalt-Repair-Mix_de.pdf" target="_blank" rel="noopener">Datenblatt</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+/* Progress Bar */
+var progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', function(){
+  var h = document.documentElement;
+  var scrollTop = h.scrollTop || document.body.scrollTop;
+  var scrollHeight = h.scrollHeight - h.clientHeight;
+  var pct = (scrollTop / scrollHeight) * 100;
+  progressBar.style.width = pct + '%';
+});
+
+/* Mobile Menu */
+var menuBtn = document.querySelector('.mobile-menu-btn');
+var nav = document.querySelector('header nav');
+if(menuBtn) menuBtn.addEventListener('click', function(){ nav.classList.toggle('open'); });
+
+/* Smooth Scroll */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(this.getAttribute('href'));
+    if(t){ e.preventDefault(); window.scrollTo({top: t.offsetTop - 80, behavior:'smooth'}); if(nav.classList.contains('open')) nav.classList.remove('open'); }
+  });
+});
+
+/* Tabs */
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+    btn.classList.add('active');
+    var p = document.getElementById('tab-'+btn.getAttribute('data-tab'));
+    if(p) p.classList.add('active');
+  });
+});
+
+/* Reference Filters */
+document.querySelectorAll('.ref-filter-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.ref-filter-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    var filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.ref-card').forEach(function(card){
+      if(filter === 'alle' || card.getAttribute('data-category') === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* Contact Form */
+var contactForm = document.getElementById('contact-form');
+if(contactForm) contactForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!contactForm.checkValidity()){ contactForm.reportValidity(); return; }
+  var success = document.createElement('div');
+  success.className = 'form-success';
+  success.textContent = 'Vielen Dank! Wir melden uns bei Ihnen.';
+  contactForm.parentNode.replaceChild(success, contactForm);
+});
+
+/* FAQ */
+document.querySelectorAll('.faq-question').forEach(function(q){
+  q.addEventListener('click', function(){
+    var a = q.nextElementSibling;
+    var open = q.classList.contains('active');
+    document.querySelectorAll('.faq-question').forEach(function(fq){ fq.classList.remove('active'); });
+    document.querySelectorAll('.faq-answer').forEach(function(fa){ fa.style.maxHeight = null; });
+    if(!open){ q.classList.add('active'); a.style.maxHeight = a.scrollHeight+'px'; }
+  });
+});
+
+})();
+</script>
+</body>
+</html>
